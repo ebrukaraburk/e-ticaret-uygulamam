@@ -1,0 +1,148 @@
+﻿.pd-image-box {
+    height: 460px;
+    background: #fff;
+    border: 1px solid #e5e9f0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+    .pd-image-box img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        transition: transform .3s ease;
+    }
+
+    .pd-image-box:hover img {
+        transform: scale(1.06);
+    }
+
+.pd-price {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #198754;
+    line-height: 1;
+}
+
+.pd-info-card {
+    background: #f8f9fb;
+    border: 1px solid #e5e9f0;
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+
+.pd-qty {
+    max-width: 150px;
+}
+
+    .pd-qty input {
+        text-align: center;
+        font-weight: 600;
+    }
+
+        .pd-qty input::-webkit-outer-spin-button,
+        .pd-qty input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .pd-qty input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+.pd-specs th {
+    width: 40%;
+    background: #f8f9fb;
+    font-weight: 600;
+    color: #495057;
+}
+
+.similar-card {
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+    .similar-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.12) !important;
+    }
+
+.similar-img {
+    height: 150px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+    .similar-img img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+/* Ortada tik bildirimi */
+.center-toast-overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.85);
+    z-index: 1080;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease, transform .25s ease;
+}
+
+    .center-toast-overlay.show {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+.center-toast-box {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.2);
+    padding: 32px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    min-width: 220px;
+}
+
+.check-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #198754;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    animation: checkPop .35s ease;
+}
+
+@keyframes checkPop {
+    0% {
+        transform: scale(0);
+    }
+
+    70% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.center-toast-text {
+    font-weight: 600;
+    color: #212529;
+    text-align: center;
+}

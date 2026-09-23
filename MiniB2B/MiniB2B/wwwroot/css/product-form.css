@@ -1,0 +1,218 @@
+﻿:root {
+    --navy: #0b1f3a;
+    --navy-deep: #071527;
+    --paper: #f6f4ef;
+    --ink: #1c2733;
+    --ink-soft: #5b6674;
+    --amber: #c08b2c;
+    --amber-light: #e0b563;
+    --line: #e3ddd0;
+    --danger: #b3311f;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+}
+
+/* ---------- Sayfa çerçevesi ---------- */
+.product-form-page {
+    background: var(--paper);
+    min-height: calc(100vh - 120px);
+    padding: 40px 16px 60px;
+}
+
+.product-form-card {
+    max-width: 760px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.product-form-head {
+    background: var(--navy);
+    padding: 22px 28px;
+    color: #fff;
+}
+
+    .product-form-head h2 {
+        font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+        font-size: 1.35rem;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .product-form-head .form-sub {
+        color: #b9c3d1;
+        font-size: 0.85rem;
+        margin-top: 4px;
+    }
+
+.product-form-body {
+    padding: 28px 28px 12px;
+}
+
+/* ---------- Bölüm başlıkları ---------- */
+.form-section {
+    margin-bottom: 26px;
+}
+
+.form-section-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--amber);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+
+/* ---------- Alanlar ---------- */
+.product-form-page .form-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 6px;
+}
+
+.product-form-page .form-control {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: 9px 12px;
+    font-size: 0.92rem;
+    color: var(--ink);
+}
+
+    .product-form-page .form-control:focus {
+        border-color: var(--amber);
+        box-shadow: 0 0 0 3px rgba(192, 139, 44, 0.15);
+    }
+
+.product-form-page .text-danger {
+    font-size: 0.8rem;
+}
+
+.validation-summary-errors ul {
+    margin-bottom: 0;
+    padding-left: 18px;
+}
+
+/* ---------- Görsel yükleme alanı ---------- */
+.image-drop {
+    position: relative;
+    border: 1.5px dashed var(--line);
+    border-radius: var(--radius-md);
+    background: #fbfaf7;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+    .image-drop.is-dragover {
+        border-color: var(--amber);
+        background: #fdf6ea;
+    }
+
+.image-preview {
+    width: 84px;
+    height: 84px;
+    flex: 0 0 auto;
+    border-radius: var(--radius-sm);
+    background: #fff;
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+    .image-preview img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    .image-preview .placeholder-icon {
+        color: var(--ink-soft);
+        font-size: 1.6rem;
+    }
+
+.image-drop-text {
+    flex: 1;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+}
+
+    .image-drop-text strong {
+        display: block;
+        color: var(--ink);
+        font-size: 0.9rem;
+        margin-bottom: 2px;
+    }
+
+    .image-drop-text .file-name {
+        color: var(--navy);
+        font-weight: 600;
+    }
+
+.image-drop input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* ---------- Alt aksiyon barı ---------- */
+.product-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 18px 28px;
+    background: #fbfaf7;
+    border-top: 1px solid var(--line);
+}
+
+.btn-save {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 9px 22px;
+    border-radius: var(--radius-sm);
+    transition: background 0.15s ease;
+}
+
+    .btn-save:hover {
+        background: var(--amber);
+        border-color: var(--amber);
+        color: var(--navy-deep);
+    }
+
+.btn-cancel {
+    background: transparent;
+    border: 1.5px solid var(--line);
+    color: var(--ink-soft);
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 8px 20px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+    .btn-cancel:hover {
+        border-color: var(--ink-soft);
+        color: var(--ink);
+    }
+
+@media (max-width: 575px) {
+    .product-form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .btn-save, .btn-cancel {
+        width: 100%;
+        text-align: center;
+    }
+}

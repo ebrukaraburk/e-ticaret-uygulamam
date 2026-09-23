@@ -1,0 +1,304 @@
+﻿:root {
+    --navy: #0b1f3a;
+    --navy-deep: #071527;
+    --paper: #f6f4ef;
+    --ink: #1c2733;
+    --ink-soft: #5b6674;
+    --amber: #c08b2c;
+    --amber-light: #e0b563;
+    --line: #e3ddd0;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+}
+
+/* ---------- Sayfa çerçevesi ---------- */
+.slider-form-page {
+    background: var(--paper);
+    min-height: calc(100vh - 120px);
+    padding: 40px 16px 60px;
+}
+
+.slider-form-card {
+    max-width: 760px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.slider-form-head {
+    background: var(--navy);
+    padding: 22px 28px;
+    color: #fff;
+}
+
+    .slider-form-head h2 {
+        font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+        font-size: 1.35rem;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .slider-form-head .form-sub {
+        color: #b9c3d1;
+        font-size: 0.85rem;
+        margin-top: 4px;
+    }
+
+.slider-form-body {
+    padding: 28px 28px 12px;
+}
+
+.form-section {
+    margin-bottom: 26px;
+}
+
+.form-section-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--amber);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+
+.slider-form-page .form-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 6px;
+}
+
+.slider-form-page .form-control {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: 9px 12px;
+    font-size: 0.92rem;
+    color: var(--ink);
+}
+
+    .slider-form-page .form-control:focus {
+        border-color: var(--amber);
+        box-shadow: 0 0 0 3px rgba(192, 139, 44, 0.15);
+    }
+
+.slider-form-page .form-text {
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+}
+
+/* ---------- Canlı önizleme ---------- */
+.slide-preview {
+    position: relative;
+    height: 180px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-color: var(--navy-deep);
+    border: 1px solid var(--line);
+}
+
+.slide-preview-blur {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(28px) brightness(0.45);
+    transform: scale(1.25);
+    transition: background-image 0.15s ease;
+}
+
+.slide-preview-img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.slide-preview-empty {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #7c8aa0;
+    font-size: 0.8rem;
+    gap: 6px;
+}
+
+    .slide-preview-empty i {
+        font-size: 1.5rem;
+    }
+
+.slide-preview-caption {
+    position: absolute;
+    left: 4%;
+    bottom: 14px;
+    max-width: 70%;
+    z-index: 2;
+    background: rgba(7, 21, 39, 0.72);
+    border-left: 3px solid var(--amber);
+    padding: 10px 14px;
+}
+
+    .slide-preview-caption h3 {
+        color: #fff;
+        font-size: 0.95rem;
+        font-weight: 700;
+        margin: 0 0 3px;
+        line-height: 1.25;
+    }
+
+    .slide-preview-caption p {
+        color: #cfd6e0;
+        font-size: 0.75rem;
+        margin: 0;
+        max-width: 260px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+/* ---------- Görsel yükleme alanı ---------- */
+.image-drop {
+    position: relative;
+    border: 1.5px dashed var(--line);
+    border-radius: var(--radius-md);
+    background: #fbfaf7;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+    transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+    .image-drop.is-dragover {
+        border-color: var(--amber);
+        background: #fdf6ea;
+    }
+
+.image-drop-text {
+    flex: 1;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+}
+
+    .image-drop-text strong {
+        display: block;
+        color: var(--ink);
+        font-size: 0.9rem;
+        margin-bottom: 2px;
+    }
+
+    .image-drop-text .file-name {
+        color: var(--navy);
+        font-weight: 600;
+    }
+
+.image-drop input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* ---------- Sıra / durum ---------- */
+.order-active-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.order-field {
+    flex: 1;
+    min-width: 160px;
+}
+
+.active-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    background: #fbfaf7;
+}
+
+    .active-toggle .form-check-input {
+        width: 2.4em;
+        height: 1.3em;
+        cursor: pointer;
+    }
+
+        .active-toggle .form-check-input:checked {
+            background-color: var(--amber);
+            border-color: var(--amber);
+        }
+
+    .active-toggle label {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--ink);
+        margin: 0;
+        cursor: pointer;
+    }
+
+/* ---------- Alt aksiyon barı ---------- */
+.slider-form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 28px;
+    background: #fbfaf7;
+    border-top: 1px solid var(--line);
+}
+
+.btn-save {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 9px 22px;
+    border-radius: var(--radius-sm);
+    transition: background 0.15s ease;
+}
+
+    .btn-save:hover {
+        background: var(--amber);
+        border-color: var(--amber);
+        color: var(--navy-deep);
+    }
+
+.btn-cancel {
+    background: transparent;
+    border: 1.5px solid var(--line);
+    color: var(--ink-soft);
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 8px 20px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+    .btn-cancel:hover {
+        border-color: var(--ink-soft);
+        color: var(--ink);
+    }
+
+@media (max-width: 575px) {
+    .slider-form-actions {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    .btn-save, .btn-cancel {
+        width: 100%;
+        text-align: center;
+    }
+}

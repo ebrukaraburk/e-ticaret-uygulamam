@@ -1,0 +1,210 @@
+﻿@model MiniB2B.Models.User
+@using System.Globalization
+
+@{
+    ViewData["Title"] = "Kullanıcı Düzenle";
+
+    var tr = new CultureInfo("tr-TR");
+    var admin = string.Equals(Model.Role, "Admin", StringComparison.OrdinalIgnoreCase);
+
+    var f = (Model.FirstName ?? "").Trim();
+    var l = (Model.LastName ?? "").Trim();
+    var adSoyad = (f + " " + l).Trim();
+    if (string.IsNullOrEmpty(adSoyad)) { adSoyad = Model.Username ?? "Kullanıcı"; }
+
+    var initials = ((f.Length > 0 ? f[0].ToString() : "") + (l.Length > 0 ? l[0].ToString() : ""));
+    if (string.IsNullOrEmpty(initials))
+    {
+        initials = string.IsNullOrEmpty(Model.Username) ? "?" : Model.Username[0].ToString();
+    }
+    initials = initials.ToUpper(tr);
+
+    var avatarClass = "ue-av-" + (Math.Abs(Model.Id) % 6);
+}
+
+<div class="ue-page">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="mb-3">
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="/Home">Anasayfa</a></li>
+            <li class="breadcrumb-item"><a asp-action="Index">Kullanıcı Yönetimi</a></li>
+            <li class="breadcrumb-item"><a asp-action="Details" asp-route-id="@Model.Id">@adSoyad</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Düzenle</li>
+        </ol>
+    </nav>
+
+    <div class="ue-card" id="ueCard">
+
+        <div class="ue-cover"></div>
+
+        <!-- Profil başlığı (yazdıkça canlı güncellenir) -->
+        <div class="ue-head">
+            <div class="ue-avatar @avatarClass" id="ueAvatar">@initials</div>
+            <div class="ue-head-info">
+                <h1 class="ue-name" id="ueLiveName">@adSoyad</h1>
+                <div class="ue-sub">Kullanıcı bilgilerini ve yetkisini düzenliyorsunuz.</div>
+            </div>
+        </div>
+
+        <form id="editForm" asp-action="Edit" method="post" novalidate
+              data-initial-role="@(admin ? "admin" : "customer")">
+
+            <input type="hidden" asp-for="Id" />
+
+            <div asp-validation-summary="ModelOnly" class="ue-summary"></div>
+
+            <!-- Kişisel bilgiler -->
+            <section class="ue-section">
+                <h2 class="ue-section-title"><i class="bi bi-person-badge"></i> Kişisel Bilgiler</h2>
+
+                <div class="ue-row">
+                    <div class="ue-field">
+                        <label for="FirstName">Ad</label>
+                        <div class="ue-input">
+                            <i class="bi bi-person"></i>
+                            <input asp-for="FirstName" placeholder="Adı" autocomplete="off" required />
+                        </div>
+                        <div class="ue-error">Ad zorunludur.</div>
+                        <span asp-validation-for="FirstName" class="ue-server-error"></span>
+                    </div>
+
+                    <div class="ue-field">
+                        <label for="LastName">Soyad</label>
+                        <div class="ue-input">
+                            <i class="bi bi-person"></i>
+                            <input asp-for="LastName" placeholder="Soyadı" autocomplete="off" required />
+                        </div>
+                        <div class="ue-error">Soyad zorunludur.</div>
+                        <span asp-validation-for="LastName" class="ue-server-error"></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hesap bilgileri -->
+            <section class="ue-section">
+                <h2 class="ue-section-title"><i class="bi bi-person-lines-fill"></i> Hesap Bilgileri</h2>
+
+                <div class="ue-field">
+                    <label for="Username">Kullanıcı Adı</label>
+                    <div class="ue-input">
+                        <i class="bi bi-at"></i>
+                        <input asp-for="Username" placeholder="kullanici_adi" autocomplete="off" required />
+                    </div>
+                    <div class="ue-error">Kullanıcı adı zorunludur.</div>
+                    <span asp-validation-for="Username" class="ue-server-error"></span>
+                </div>
+
+                <div class="ue-row">
+                    <div class="ue-field">
+                        <label for="Email">E-Posta</label>
+                        <div class="ue-input">
+                            <i class="bi bi-envelope"></i>
+                            <input asp-for="Email" type="email" placeholder="ornek@firma.com" autocomplete="off" required />
+                        </div>
+                        <div class="ue-error">Geçerli bir e-posta adresi girin.</div>
+                        <span asp-validation-for="Email" class="ue-server-error"></span>
+                    </div>
+
+                    <div class="ue-field">
+                        <label for="PhoneNumber">Telefon <span class="ue-optional">(isteğe bağlı)</span></label>
+                        <div class="ue-input">
+                            <i class="bi bi-telephone"></i>
+                            <input asp-for="PhoneNumber" type="tel" placeholder="05xx xxx xx xx" autocomplete="off" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Rol -->
+            <section class="ue-section">
+                <h2 class="ue-section-title"><i class="bi bi-shield-check"></i> Rol ve Yetki</h2>
+
+                <div class="ue-roles">
+                    <label class="ue-role-card">
+                        <input type="radio" name="Role" id="roleCustomer" value="Customer" checked="@(!admin)" />
+                        <span class="ue-role-box">
+                            <span class="ue-role-icon ue-role-icon-user"><i class="bi bi-shop"></i></span>
+                            <span class="ue-role-text">
+                                <strong>Bayi / Müşteri</strong>
+                                <small>Ürünleri görüntüler, sepet ve sipariş oluşturur.</small>
+                            </span>
+                            <i class="bi bi-check-circle-fill ue-role-check"></i>
+                        </span>
+                    </label>
+
+                    <label class="ue-role-card">
+                        <input type="radio" name="Role" id="roleAdmin" value="Admin" checked="@admin" />
+                        <span class="ue-role-box">
+                            <span class="ue-role-icon ue-role-icon-admin"><i class="bi bi-shield-lock-fill"></i></span>
+                            <span class="ue-role-text">
+                                <strong>Yönetici (Admin)</strong>
+                                <small>Ürün, kullanıcı, slider ve siparişleri yönetir.</small>
+                            </span>
+                            <i class="bi bi-check-circle-fill ue-role-check"></i>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="ue-warn" id="roleWarn" hidden>
+                    <i class="bi bi-exclamation-triangle-fill"></i>
+                    <span>Bu kullanıcının yönetici yetkisi kaldırılacak. Kendi hesabınızı düzenliyorsanız yönetim paneline erişiminizi kaybedersiniz.</span>
+                </div>
+            </section>
+
+            <!-- Şifre -->
+            <section class="ue-section">
+                <h2 class="ue-section-title"><i class="bi bi-key"></i> Şifre <span class="ue-optional">(değiştirmek istemiyorsanız boş bırakın)</span></h2>
+
+                <div class="ue-row">
+                    <div class="ue-field">
+                        <label for="newPassword">Yeni Şifre</label>
+                        <div class="ue-input">
+                            <i class="bi bi-lock"></i>
+                           
+                            <input type="password" id="newPassword" name="newPassword"
+                                   placeholder="••••••••" autocomplete="new-password" />
+                            <button type="button" class="ue-toggle" id="togglePassword"
+                                    aria-label="Şifreyi göster/gizle" tabindex="-1">
+                                <i class="bi bi-eye"></i>
+                            </button>
+                        </div>
+                        <div class="ue-strength" id="strength" aria-hidden="true">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                        <div class="ue-strength-text" id="strengthText"></div>
+                    </div>
+
+                    <div class="ue-field">
+                        <label for="newPasswordConfirm">Yeni Şifre Tekrar</label>
+                        <div class="ue-input">
+                            <i class="bi bi-lock-fill"></i>
+                            <input type="password" id="newPasswordConfirm"
+                                   placeholder="••••••••" autocomplete="new-password" />
+                        </div>
+                        <div class="ue-error" id="confirmError">Şifreler eşleşmiyor.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Butonlar -->
+            <div class="ue-actions">
+                <a asp-action="Index" class="ue-btn ue-btn-cancel">
+                    <i class="bi bi-x-lg"></i> İptal
+                </a>
+                <button type="submit" class="ue-btn ue-btn-save" id="saveBtn">
+                    <span class="ue-btn-text"><i class="bi bi-check-lg"></i> Kaydet</span>
+                    <span class="ue-spinner" aria-hidden="true"></span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/user-edit.css" asp-append-version="true" />
+}
+
+@section Scripts {
+    <script src="~/js/user-edit.js" asp-append-version="true"></script>
+}

@@ -1,0 +1,110 @@
+﻿@model MiniB2B.Models.Order
+
+@{
+    ViewData["Title"] = "Sipariş Detayı - " + Model.OrderNumber;
+
+    var statusClass = "bg-" + MiniB2B.Services.OrderService.Renk(Model.Status);
+    var akis = MiniB2B.Models.OrderStatus.Flow;
+    int mevcutIndex = Array.IndexOf(akis, Model.Status);
+    bool reddedildiVeyaIptal = Model.Status == MiniB2B.Models.OrderStatus.Rejected
+                             || Model.Status == MiniB2B.Models.OrderStatus.Cancelled;
+}
+
+<link rel="stylesheet" href="~/css/order-detail.css" />
+
+<div class="container mt-4 order-detail-page">
+    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+        <h2 class="mb-0"><i class="bi bi-file-text"></i> Sipariş Detayı (#@Model.OrderNumber)</h2>
+        <div class="d-flex gap-2">
+            <button type="button" class="btn btn-outline-primary btn-sm" id="printOrderBtn">
+                <i class="bi bi-printer"></i> Yazdır
+            </button>
+            <a asp-action="MyOrders" class="btn btn-outline-secondary btn-sm">
+                <i class="bi bi-arrow-left"></i> Siparişlerime Dön
+            </a>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <p class="mb-1 text-muted">Sipariş Tarihi:</p>
+                    <h5 class="fw-bold">@Model.OrderDate.ToString("dd.MM.yyyy HH:mm")</h5>
+                </div>
+                <div class="col-md-4">
+                    <p class="mb-1 text-muted">Sipariş Durumu:</p>
+                    <h5><span class="badge @statusClass fs-6">@Model.Status</span></h5>
+                </div>
+                <div class="col-md-4">
+                    <p class="mb-1 text-muted">Toplam Tutar:</p>
+                    <h5 class="text-success fw-bold">@Model.TotalAmount.ToString("N2") ₺</h5>
+                </div>
+            </div>
+
+            <!-- Durum takip çubuğu -->
+            <div class="status-timeline mt-4">
+                @if (reddedildiVeyaIptal)
+                {
+                    <div class="timeline-step done">
+                        <span class="step-dot"></span>
+                        <span class="step-label">Sipariş Alındı</span>
+                    </div>
+                    <div class="timeline-step done rejected">
+                        <span class="step-dot"></span>
+                        <span class="step-label">@Model.Status</span>
+                    </div>
+                }
+                else
+                {
+                    for (int i = 0; i < akis.Length; i++)
+                    {
+                        bool tamamlandi = mevcutIndex >= i;
+                        bool cizgiTamam = mevcutIndex > i;
+                        <div class="timeline-step @(tamamlandi ? "done" : "") @(cizgiTamam ? "line-done" : "")">
+                            <span class="step-dot"></span>
+                            <span class="step-label">@akis[i]</span>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+
+    <h4 class="mb-3">Sipariş Edilen Ürünler</h4>
+    <div class="card shadow-sm">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0" id="orderItemsTable">
+                <thead class="table-light">
+                    <tr>
+                        <th>Ürün Kodu</th>
+                        <th>Ürün Adı</th>
+                        <th>Adet</th>
+                        <th>Birim Fiyat</th>
+                        <th class="text-end">Toplam</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.OrderItems)
+                    {
+                        <tr>
+                            <td>@item.ProductCode</td>
+                            <td class="fw-bold">@item.ProductName</td>
+                            <td>@item.Quantity</td>
+                            <td>@item.UnitPrice.ToString("N2") ₺</td>
+                            <td class="text-end fw-bold text-success">@item.TotalPrice.ToString("N2") ₺</td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr class="order-total-row">
+                        <td colspan="4" class="text-end fw-bold">Genel Toplam</td>
+                        <td class="text-end fw-bold text-success fs-5">@Model.TotalAmount.ToString("N2") ₺</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/order-detail.js"></script>

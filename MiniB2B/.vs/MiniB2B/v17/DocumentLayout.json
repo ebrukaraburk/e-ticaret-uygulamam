@@ -1,0 +1,1253 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\readme (1).md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\readme (1).md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\minib2b.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\minib2b.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\wwwroot\\css\\user-edit.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\wwwroot\\css\\user-edit.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\views\\user\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\views\\user\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\views\\user\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\views\\user\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\views\\slideradmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\views\\slideradmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\views\\slideradmin\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\views\\slideradmin\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\views\\shared\\_gridcell.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\views\\shared\\_gridcell.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\views\\product\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\views\\product\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\views\\order\\payment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\views\\order\\payment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\views\\order\\myorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\views\\order\\myorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\views\\order\\cartindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\views\\order\\cartindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\views\\admin\\orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\views\\admin\\orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\viewmodels\\productgridviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\viewmodels\\productgridviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\viewmodels\\gridcellviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\viewmodels\\gridcellviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\services\\sliderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\services\\sliderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\services\\isliderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\services\\isliderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\services\\gridconfigservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\services\\gridconfigservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\models\\slideritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\models\\slideritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\models\\savedcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\models\\savedcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\models\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\models\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\models\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\models\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\models\\gridcolumnconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\models\\gridcolumnconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\models\\basketitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\models\\basketitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\models\\basket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\models\\basket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\migrations\\20260918110023_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\migrations\\20260918110023_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\helpers\\gridcolumnrenderhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\helpers\\gridcolumnrenderhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\helpers\\dynamicpropertyreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\helpers\\dynamicpropertyreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\wwwroot\\js\\layout.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\wwwroot\\js\\layout.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\wwwroot\\js\\home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\wwwroot\\js\\home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\wwwroot\\js\\basket.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\wwwroot\\js\\basket.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\wwwroot\\css\\layout.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\wwwroot\\css\\layout.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\wwwroot\\js\\order-detail.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\wwwroot\\js\\order-detail.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\wwwroot\\js\\my-orders.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\wwwroot\\js\\my-orders.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\wwwroot\\js\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\wwwroot\\js\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\wwwroot\\css\\order-detail.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\wwwroot\\css\\order-detail.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\wwwroot\\css\\user-index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\wwwroot\\css\\user-index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\wwwroot\\css\\user-details.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\wwwroot\\css\\user-details.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\wwwroot\\css\\slider-index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\wwwroot\\css\\slider-index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\wwwroot\\css\\slider-form.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\wwwroot\\css\\slider-form.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\wwwroot\\css\\register.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\wwwroot\\css\\register.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\wwwroot\\css\\product-index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\wwwroot\\css\\product-index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\wwwroot\\css\\product-form.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\wwwroot\\css\\product-form.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\wwwroot\\css\\product-details.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\wwwroot\\css\\product-details.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\wwwroot\\css\\order-management.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\wwwroot\\css\\order-management.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\wwwroot\\css\\my-orders.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\wwwroot\\css\\my-orders.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\wwwroot\\css\\basket.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\wwwroot\\css\\basket.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|c:\\users\\huawe\u0130\\desktop\\projem\\minib2b\\minib2b\\migrations\\20260923113815_eklentiler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1A8C7B2-E641-43A0-8087-A4F7BBA6A3F6}|MiniB2B\\MiniB2B.csproj|solutionrelative:minib2b\\migrations\\20260923113815_eklentiler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "README (1).md",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\README (1).md",
+              "RelativeDocumentMoniker": "MiniB2B\\README (1).md",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\README (1).md",
+              "RelativeToolTip": "MiniB2B\\README (1).md",
+              "ViewState": "AgIAANsAAAAAAAAAAAAswAYBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-09-23T13:13:59.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MiniB2B.csproj",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\MiniB2B.csproj",
+              "RelativeDocumentMoniker": "MiniB2B\\MiniB2B.csproj",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\MiniB2B.csproj",
+              "RelativeToolTip": "MiniB2B\\MiniB2B.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-09-23T12:43:27.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\appsettings.json",
+              "RelativeDocumentMoniker": "MiniB2B\\appsettings.json",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\appsettings.json",
+              "RelativeToolTip": "MiniB2B\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-23T12:38:56.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "MiniB2B\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T12:23:23.062Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Program.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Program.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Program.cs",
+              "RelativeToolTip": "MiniB2B\\Program.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAmwDgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T12:22:44.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\User\\Index.cshtml",
+              "RelativeDocumentMoniker": "MiniB2B\\Views\\User\\Index.cshtml",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\User\\Index.cshtml",
+              "RelativeToolTip": "MiniB2B\\Views\\User\\Index.cshtml",
+              "ViewState": "AgIAAMcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-23T12:22:34.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\User\\Edit.cshtml",
+              "RelativeDocumentMoniker": "MiniB2B\\Views\\User\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\User\\Edit.cshtml",
+              "RelativeToolTip": "MiniB2B\\Views\\User\\Edit.cshtml",
+              "ViewState": "AgIAALQAAAAAAAAAAAAAAKMAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-23T12:22:13.828Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\User\\Details.cshtml",
+              "RelativeDocumentMoniker": "MiniB2B\\Views\\User\\Details.cshtml",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\User\\Details.cshtml",
+              "RelativeToolTip": "MiniB2B\\Views\\User\\Details.cshtml",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-23T12:22:06.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "MiniB2B\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAmwGwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T11:14:28.764Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\User.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\User.cs",
+              "RelativeToolTip": "MiniB2B\\Models\\User.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAzwCYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T11:42:52.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "MiniB2B\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAA/wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T12:23:15.289Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "MiniB2B\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T12:23:20.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\SliderAdmin\\Index.cshtml",
+              "RelativeDocumentMoniker": "MiniB2B\\Views\\SliderAdmin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\SliderAdmin\\Index.cshtml",
+              "RelativeToolTip": "MiniB2B\\Views\\SliderAdmin\\Index.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-23T12:22:02.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "MiniB2B\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "MiniB2B\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-23T12:21:56.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "user-edit.css",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\user-edit.css",
+              "RelativeDocumentMoniker": "MiniB2B\\wwwroot\\css\\user-edit.css",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\user-edit.css",
+              "RelativeToolTip": "MiniB2B\\wwwroot\\css\\user-edit.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-23T11:08:24.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Profile\\Index.cshtml",
+              "RelativeDocumentMoniker": "MiniB2B\\Views\\Profile\\Index.cshtml",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Profile\\Index.cshtml",
+              "RelativeToolTip": "MiniB2B\\Views\\Profile\\Index.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-23T12:21:16.577Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Product\\Edit.cshtml",
+              "RelativeDocumentMoniker": "MiniB2B\\Views\\Product\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Product\\Edit.cshtml",
+              "RelativeToolTip": "MiniB2B\\Views\\Product\\Edit.cshtml",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-23T12:20:52.451Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Product\\Details.cshtml",
+              "RelativeDocumentMoniker": "MiniB2B\\Views\\Product\\Details.cshtml",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Product\\Details.cshtml",
+              "RelativeToolTip": "MiniB2B\\Views\\Product\\Details.cshtml",
+              "ViewState": "AgIAAP8AAAAAAAAAAAAAAFcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-23T12:20:32.903Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Payment.cshtml",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Order\\Payment.cshtml",
+              "RelativeDocumentMoniker": "MiniB2B\\Views\\Order\\Payment.cshtml",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Order\\Payment.cshtml",
+              "RelativeToolTip": "MiniB2B\\Views\\Order\\Payment.cshtml",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-23T12:20:14.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "MyOrders.cshtml",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Order\\MyOrders.cshtml",
+              "RelativeDocumentMoniker": "MiniB2B\\Views\\Order\\MyOrders.cshtml",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Order\\MyOrders.cshtml",
+              "RelativeToolTip": "MiniB2B\\Views\\Order\\MyOrders.cshtml",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-23T12:20:06.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\SliderAdmin\\Create.cshtml",
+              "RelativeDocumentMoniker": "MiniB2B\\Views\\SliderAdmin\\Create.cshtml",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\SliderAdmin\\Create.cshtml",
+              "RelativeToolTip": "MiniB2B\\Views\\SliderAdmin\\Create.cshtml",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-23T11:41:33.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Order\\Details.cshtml",
+              "RelativeDocumentMoniker": "MiniB2B\\Views\\Order\\Details.cshtml",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Order\\Details.cshtml",
+              "RelativeToolTip": "MiniB2B\\Views\\Order\\Details.cshtml",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-23T12:20:02.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "_GridCell.cshtml",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Shared\\_GridCell.cshtml",
+              "RelativeDocumentMoniker": "MiniB2B\\Views\\Shared\\_GridCell.cshtml",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Shared\\_GridCell.cshtml",
+              "RelativeToolTip": "MiniB2B\\Views\\Shared\\_GridCell.cshtml",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAIwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-23T11:13:34.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "MiniB2B\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "MiniB2B\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAAAK4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-23T11:40:43.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CartIndex.cshtml",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Order\\CartIndex.cshtml",
+              "RelativeDocumentMoniker": "MiniB2B\\Views\\Order\\CartIndex.cshtml",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Order\\CartIndex.cshtml",
+              "RelativeToolTip": "MiniB2B\\Views\\Order\\CartIndex.cshtml",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAG0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-23T12:19:43.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "MiniB2B\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "MiniB2B\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-23T12:19:41.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "MiniB2B\\Views\\Product\\Index.cshtml",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "MiniB2B\\Views\\Product\\Index.cshtml",
+              "ViewState": "AgIAAN4AAAAAAAAAAAAAAPoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-23T11:26:21.888Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "MiniB2B\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "MiniB2B\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-23T12:19:38.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "MiniB2B\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "MiniB2B\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-23T12:19:27.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Product\\Create.cshtml",
+              "RelativeDocumentMoniker": "MiniB2B\\Views\\Product\\Create.cshtml",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Product\\Create.cshtml",
+              "RelativeToolTip": "MiniB2B\\Views\\Product\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-23T11:45:52.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "MiniB2B\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "MiniB2B\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-23T12:19:21.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Services\\UserService.cs",
+              "RelativeToolTip": "MiniB2B\\Services\\UserService.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAcwGsAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T12:18:42.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ISliderService.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Services\\ISliderService.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Services\\ISliderService.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Services\\ISliderService.cs",
+              "RelativeToolTip": "MiniB2B\\Services\\ISliderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T12:15:00.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Services\\OrderService.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Services\\OrderService.cs",
+              "RelativeToolTip": "MiniB2B\\Services\\OrderService.cs",
+              "ViewState": "AgIAANcAAAAAAAAAAAAqwC8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T12:15:04.252Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Services\\ProductService.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Services\\ProductService.cs",
+              "RelativeToolTip": "MiniB2B\\Services\\ProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T12:15:17.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Orders.cshtml",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Admin\\Orders.cshtml",
+              "RelativeDocumentMoniker": "MiniB2B\\Views\\Admin\\Orders.cshtml",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Views\\Admin\\Orders.cshtml",
+              "RelativeToolTip": "MiniB2B\\Views\\Admin\\Orders.cshtml",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-23T11:42:00.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "GridConfigService.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Services\\GridConfigService.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Services\\GridConfigService.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Services\\GridConfigService.cs",
+              "RelativeToolTip": "MiniB2B\\Services\\GridConfigService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T11:14:08.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "GridCellViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\ViewModels\\GridCellViewModel.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\ViewModels\\GridCellViewModel.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\ViewModels\\GridCellViewModel.cs",
+              "RelativeToolTip": "MiniB2B\\ViewModels\\GridCellViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T11:13:54.596Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ProductGridViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\ViewModels\\ProductGridViewModel.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\ViewModels\\ProductGridViewModel.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\ViewModels\\ProductGridViewModel.cs",
+              "RelativeToolTip": "MiniB2B\\ViewModels\\ProductGridViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T11:14:00.959Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "SliderItem.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\SliderItem.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Models\\SliderItem.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\SliderItem.cs",
+              "RelativeToolTip": "MiniB2B\\Models\\SliderItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T12:17:07.141Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "SavedCard.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\SavedCard.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Models\\SavedCard.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\SavedCard.cs",
+              "RelativeToolTip": "MiniB2B\\Models\\SavedCard.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T12:17:02.027Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "SliderService.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Services\\SliderService.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Services\\SliderService.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Services\\SliderService.cs",
+              "RelativeToolTip": "MiniB2B\\Services\\SliderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T12:15:29.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ProfileViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\ProfileViewModel.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Models\\ProfileViewModel.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\ProfileViewModel.cs",
+              "RelativeToolTip": "MiniB2B\\Models\\ProfileViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T12:17:00.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\Product.cs",
+              "RelativeToolTip": "MiniB2B\\Models\\Product.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T12:16:30.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "OrderStatus.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\OrderStatus.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Models\\OrderStatus.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\OrderStatus.cs",
+              "RelativeToolTip": "MiniB2B\\Models\\OrderStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T12:16:31.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\OrderItem.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Models\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\OrderItem.cs",
+              "RelativeToolTip": "MiniB2B\\Models\\OrderItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T12:16:28.714Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\Order.cs",
+              "RelativeToolTip": "MiniB2B\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T12:16:27.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "MiniB2B\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T11:14:17.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\Category.cs",
+              "RelativeToolTip": "MiniB2B\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T12:16:19.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "BasketItem.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\BasketItem.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Models\\BasketItem.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\BasketItem.cs",
+              "RelativeToolTip": "MiniB2B\\Models\\BasketItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T12:16:17.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Basket.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\Basket.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Models\\Basket.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\Basket.cs",
+              "RelativeToolTip": "MiniB2B\\Models\\Basket.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T12:16:16.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "20260918110023_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Migrations\\20260918110023_InitialCreate.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Migrations\\20260918110023_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Migrations\\20260918110023_InitialCreate.cs",
+              "RelativeToolTip": "MiniB2B\\Migrations\\20260918110023_InitialCreate.cs",
+              "ViewState": "AgIAALUAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T12:16:09.342Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "basket.js",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\js\\basket.js",
+              "RelativeDocumentMoniker": "MiniB2B\\wwwroot\\js\\basket.js",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\js\\basket.js",
+              "RelativeToolTip": "MiniB2B\\wwwroot\\js\\basket.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-09-23T11:09:00.114Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "GridColumnConfig.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\GridColumnConfig.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Models\\GridColumnConfig.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Models\\GridColumnConfig.cs",
+              "RelativeToolTip": "MiniB2B\\Models\\GridColumnConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T11:14:18.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "home.js",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\js\\home.js",
+              "RelativeDocumentMoniker": "MiniB2B\\wwwroot\\js\\home.js",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\js\\home.js",
+              "RelativeToolTip": "MiniB2B\\wwwroot\\js\\home.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-09-23T11:09:09.131Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "layout.js",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\js\\layout.js",
+              "RelativeDocumentMoniker": "MiniB2B\\wwwroot\\js\\layout.js",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\js\\layout.js",
+              "RelativeToolTip": "MiniB2B\\wwwroot\\js\\layout.js",
+              "ViewState": "AgIAADIAAAAAAAAAAAAmwCsAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-09-23T11:09:16.681Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "DynamicPropertyReader.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Helpers\\DynamicPropertyReader.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Helpers\\DynamicPropertyReader.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Helpers\\DynamicPropertyReader.cs",
+              "RelativeToolTip": "MiniB2B\\Helpers\\DynamicPropertyReader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T11:28:02.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "GridColumnRenderHelper.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Helpers\\GridColumnRenderHelper.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Helpers\\GridColumnRenderHelper.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Helpers\\GridColumnRenderHelper.cs",
+              "RelativeToolTip": "MiniB2B\\Helpers\\GridColumnRenderHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T11:32:50.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "20260923113815_eklentiler.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Migrations\\20260923113815_eklentiler.cs",
+              "RelativeDocumentMoniker": "MiniB2B\\Migrations\\20260923113815_eklentiler.cs",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\Migrations\\20260923113815_eklentiler.cs",
+              "RelativeToolTip": "MiniB2B\\Migrations\\20260923113815_eklentiler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T11:38:16.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "order-detail.js",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\js\\order-detail.js",
+              "RelativeDocumentMoniker": "MiniB2B\\wwwroot\\js\\order-detail.js",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\js\\order-detail.js",
+              "RelativeToolTip": "MiniB2B\\wwwroot\\js\\order-detail.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-09-23T11:10:02.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "my-orders.js",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\js\\my-orders.js",
+              "RelativeDocumentMoniker": "MiniB2B\\wwwroot\\js\\my-orders.js",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\js\\my-orders.js",
+              "RelativeToolTip": "MiniB2B\\wwwroot\\js\\my-orders.js",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-09-23T11:09:59.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "login.js",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\js\\login.js",
+              "RelativeDocumentMoniker": "MiniB2B\\wwwroot\\js\\login.js",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\js\\login.js",
+              "RelativeToolTip": "MiniB2B\\wwwroot\\js\\login.js",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-09-23T11:09:48.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "user-index.css",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\user-index.css",
+              "RelativeDocumentMoniker": "MiniB2B\\wwwroot\\css\\user-index.css",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\user-index.css",
+              "RelativeToolTip": "MiniB2B\\wwwroot\\css\\user-index.css",
+              "ViewState": "AgIAAMsBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-23T11:08:31.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "layout.css",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\layout.css",
+              "RelativeDocumentMoniker": "MiniB2B\\wwwroot\\css\\layout.css",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\layout.css",
+              "RelativeToolTip": "MiniB2B\\wwwroot\\css\\layout.css",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAUwK0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-23T10:52:57.543Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "user-details.css",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\user-details.css",
+              "RelativeDocumentMoniker": "MiniB2B\\wwwroot\\css\\user-details.css",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\user-details.css",
+              "RelativeToolTip": "MiniB2B\\wwwroot\\css\\user-details.css",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-23T11:08:11.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "order-detail.css",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\order-detail.css",
+              "RelativeDocumentMoniker": "MiniB2B\\wwwroot\\css\\order-detail.css",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\order-detail.css",
+              "RelativeToolTip": "MiniB2B\\wwwroot\\css\\order-detail.css",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAACEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-23T10:53:37.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "slider-index.css",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\slider-index.css",
+              "RelativeDocumentMoniker": "MiniB2B\\wwwroot\\css\\slider-index.css",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\slider-index.css",
+              "RelativeToolTip": "MiniB2B\\wwwroot\\css\\slider-index.css",
+              "ViewState": "AgIAAMwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-23T11:08:07.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "slider-form.css",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\slider-form.css",
+              "RelativeDocumentMoniker": "MiniB2B\\wwwroot\\css\\slider-form.css",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\slider-form.css",
+              "RelativeToolTip": "MiniB2B\\wwwroot\\css\\slider-form.css",
+              "ViewState": "AgIAAAUBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-23T11:07:58.715Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "register.css",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\register.css",
+              "RelativeDocumentMoniker": "MiniB2B\\wwwroot\\css\\register.css",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\register.css",
+              "RelativeToolTip": "MiniB2B\\wwwroot\\css\\register.css",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAABAAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-23T11:07:42.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "product-index.css",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\product-index.css",
+              "RelativeDocumentMoniker": "MiniB2B\\wwwroot\\css\\product-index.css",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\product-index.css",
+              "RelativeToolTip": "MiniB2B\\wwwroot\\css\\product-index.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-23T11:07:35.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "product-form.css",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\product-form.css",
+              "RelativeDocumentMoniker": "MiniB2B\\wwwroot\\css\\product-form.css",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\product-form.css",
+              "RelativeToolTip": "MiniB2B\\wwwroot\\css\\product-form.css",
+              "ViewState": "AgIAANoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-23T11:07:27.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "product-details.css",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\product-details.css",
+              "RelativeDocumentMoniker": "MiniB2B\\wwwroot\\css\\product-details.css",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\product-details.css",
+              "RelativeToolTip": "MiniB2B\\wwwroot\\css\\product-details.css",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-23T10:53:59.357Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "order-management.css",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\order-management.css",
+              "RelativeDocumentMoniker": "MiniB2B\\wwwroot\\css\\order-management.css",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\order-management.css",
+              "RelativeToolTip": "MiniB2B\\wwwroot\\css\\order-management.css",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-23T10:53:54.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "my-orders.css",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\my-orders.css",
+              "RelativeDocumentMoniker": "MiniB2B\\wwwroot\\css\\my-orders.css",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\my-orders.css",
+              "RelativeToolTip": "MiniB2B\\wwwroot\\css\\my-orders.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-23T10:53:33.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "login.css",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\login.css",
+              "RelativeDocumentMoniker": "MiniB2B\\wwwroot\\css\\login.css",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\login.css",
+              "RelativeToolTip": "MiniB2B\\wwwroot\\css\\login.css",
+              "ViewState": "AgIAAKkBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-23T10:53:19.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "home.css",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\home.css",
+              "RelativeDocumentMoniker": "MiniB2B\\wwwroot\\css\\home.css",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\home.css",
+              "RelativeToolTip": "MiniB2B\\wwwroot\\css\\home.css",
+              "ViewState": "AgIAAAsBAAAAAAAAAAAAAI8AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-23T10:52:34.289Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "basket.css",
+              "DocumentMoniker": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\basket.css",
+              "RelativeDocumentMoniker": "MiniB2B\\wwwroot\\css\\basket.css",
+              "ToolTip": "C:\\Users\\HUAWE\u0130\\Desktop\\projem\\MiniB2B\\MiniB2B\\wwwroot\\css\\basket.css",
+              "RelativeToolTip": "MiniB2B\\wwwroot\\css\\basket.css",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-23T10:52:25.938Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+﻿@model MiniB2B.Models.User
+@{
+    ViewData["Title"] = "Kayıt Ol";
+}
+
+<div class="auth-page">
+    <div class="auth-shell auth-shell-lg">
+
+        <!-- Sol: marka alanı (mobilde gizlenir) -->
+        <aside class="auth-brand">
+            <div class="auth-brand-logo">
+                <i class="bi bi-box-seam-fill"></i>
+                <span>MiniB2B</span>
+            </div>
+
+            <div class="auth-brand-body">
+                <h2>Bayi Hesabınızı Oluşturun</h2>
+                <p>Birkaç bilgiyle kaydolun, ürün kataloğuna erişin ve siparişlerinizi kolayca yönetin.</p>
+
+                <ul class="auth-features">
+                    <li><i class="bi bi-grid-fill"></i> Tüm ürün kataloğuna erişim</li>
+                    <li><i class="bi bi-cart-check-fill"></i> Kolay sepet ve sipariş oluşturma</li>
+                    <li><i class="bi bi-shield-check"></i> Güvenli hesap yönetimi</li>
+                </ul>
+            </div>
+
+            <small class="auth-brand-foot">&copy; 2026 MiniB2B</small>
+        </aside>
+
+        <!-- Sağ: form -->
+        <section class="auth-form-wrap">
+            <div class="auth-mobile-logo">
+                <i class="bi bi-box-seam-fill"></i> MiniB2B
+            </div>
+
+            <h1 class="auth-title">Kayıt Ol</h1>
+            <p class="auth-subtitle">Yeni bir hesap oluşturmak için bilgilerinizi girin.</p>
+
+            @if (ViewBag.Error != null)
+            {
+                <div class="auth-alert auth-alert-danger" role="alert">
+                    <i class="bi bi-exclamation-circle-fill"></i>
+                    <span>@ViewBag.Error</span>
+                </div>
+            }
+
+            <form id="registerForm" asp-controller="Account" asp-action="Register" method="post" novalidate>
+
+                <div class="auth-row">
+                    <div class="auth-field">
+                        <label for="FirstName">Ad</label>
+                        <div class="auth-input">
+                            <i class="bi bi-person"></i>
+                            <input asp-for="FirstName" placeholder="Adınız" autocomplete="given-name" required />
+                        </div>
+                        <div class="auth-error">Adınızı girin.</div>
+                    </div>
+
+                    <div class="auth-field">
+                        <label for="LastName">Soyad</label>
+                        <div class="auth-input">
+                            <i class="bi bi-person"></i>
+                            <input asp-for="LastName" placeholder="Soyadınız" autocomplete="family-name" required />
+                        </div>
+                        <div class="auth-error">Soyadınızı girin.</div>
+                    </div>
+                </div>
+
+                <div class="auth-field">
+                    <label for="Username">Kullanıcı Adı</label>
+                    <div class="auth-input">
+                        <i class="bi bi-at"></i>
+                        <input asp-for="Username" placeholder="kullanici_adi" autocomplete="username" required />
+                    </div>
+                    <div class="auth-error">Kullanıcı adı zorunludur.</div>
+                </div>
+
+                <div class="auth-field">
+                    <label for="Email">E-Posta</label>
+                    <div class="auth-input">
+                        <i class="bi bi-envelope"></i>
+                        <input asp-for="Email" type="email" placeholder="ornek@firma.com" autocomplete="email" required />
+                    </div>
+                    <div class="auth-error">Geçerli bir e-posta adresi girin.</div>
+                </div>
+
+                <div class="auth-field">
+                    <label for="PhoneNumber">Telefon <span class="auth-optional">(isteğe bağlı)</span></label>
+                    <div class="auth-input">
+                        <i class="bi bi-telephone"></i>
+                        <input asp-for="PhoneNumber" type="tel" placeholder="05xx xxx xx xx" autocomplete="tel" />
+                    </div>
+                </div>
+
+                <div class="auth-row">
+                    <div class="auth-field">
+                        <label for="password">Şifre</label>
+                        <div class="auth-input">
+                            <i class="bi bi-lock"></i>
+                            <input type="password" id="password" name="password"
+                                   placeholder="••••••••" autocomplete="new-password" required />
+                            <button type="button" class="auth-toggle" id="togglePassword"
+                                    aria-label="Şifreyi göster/gizle" tabindex="-1">
+                                <i class="bi bi-eye"></i>
+                            </button>
+                        </div>
+                        <div class="auth-strength" id="strength" aria-hidden="true">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                        <div class="auth-strength-text" id="strengthText"></div>
+                        <div class="auth-error">Şifre zorunludur.</div>
+                    </div>
+
+                    <div class="auth-field">
+                        <label for="passwordConfirm">Şifre Tekrar</label>
+                        <div class="auth-input">
+                            <i class="bi bi-lock-fill"></i>
+                            <input type="password" id="passwordConfirm"
+                                   placeholder="••••••••" autocomplete="new-password" required />
+                        </div>
+                        <div class="auth-error" id="confirmError">Şifreyi tekrar girin.</div>
+                    </div>
+                </div>
+
+                <button type="submit" class="auth-submit" id="registerBtn">
+                    <span class="auth-submit-text">Kayıt Ol</span>
+                    <span class="auth-spinner" aria-hidden="true"></span>
+                </button>
+            </form>
+
+            <p class="auth-switch">
+                Zaten hesabınız var mı?
+                <a asp-controller="Account" asp-action="Login">Giriş Yap</a>
+            </p>
+        </section>
+    </div>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/register.css" asp-append-version="true" />
+}
+
+@section Scripts {
+    <script src="~/js/register.js" asp-append-version="true"></script>
+}

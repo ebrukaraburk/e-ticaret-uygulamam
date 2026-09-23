@@ -1,0 +1,205 @@
+﻿@model MiniB2B.Models.User
+@using System.Globalization
+
+@{
+    ViewData["Title"] = "Kullanıcı Detayları";
+
+    var tr = new CultureInfo("tr-TR");
+    var admin = string.Equals(Model.Role, "Admin", StringComparison.OrdinalIgnoreCase);
+
+    var f = (Model.FirstName ?? "").Trim();
+    var l = (Model.LastName ?? "").Trim();
+    var adSoyad = (f + " " + l).Trim();
+    if (string.IsNullOrEmpty(adSoyad)) { adSoyad = Model.Username ?? "Kullanıcı"; }
+
+    var initials = ((f.Length > 0 ? f[0].ToString() : "") + (l.Length > 0 ? l[0].ToString() : ""));
+    if (string.IsNullOrEmpty(initials))
+    {
+        initials = string.IsNullOrEmpty(Model.Username) ? "?" : Model.Username[0].ToString();
+    }
+    initials = initials.ToUpper(tr);
+
+    var avatarClass = "ud-av-" + (Math.Abs(Model.Id) % 6);
+    var rolAdi = admin ? "Yönetici" : (string.IsNullOrEmpty(Model.Role) ? "Bayi" : Model.Role);
+}
+
+<div class="ud-page">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="mb-3">
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="/Home">Anasayfa</a></li>
+            <li class="breadcrumb-item"><a asp-action="Index">Kullanıcı Yönetimi</a></li>
+            <li class="breadcrumb-item active" aria-current="page">@adSoyad</li>
+        </ol>
+    </nav>
+
+    <div class="ud-card">
+
+        <!-- Üst kapak -->
+        <div class="ud-cover"></div>
+
+        <!-- Profil başlığı -->
+        <div class="ud-head">
+            <div class="ud-avatar @avatarClass">@initials</div>
+
+            <div class="ud-head-info">
+                <h1 class="ud-name">@adSoyad</h1>
+                <div class="ud-meta">
+                    <span class="ud-username">@("@" + Model.Username)</span>
+                    @if (admin)
+                    {
+                        <span class="ud-role ud-role-admin"><i class="bi bi-shield-lock-fill"></i> @rolAdi</span>
+                    }
+                    else
+                    {
+                        <span class="ud-role ud-role-user"><i class="bi bi-shop"></i> @rolAdi</span>
+                    }
+                </div>
+            </div>
+
+            <div class="ud-head-actions">
+                <a asp-action="Edit" asp-route-id="@Model.Id" class="ud-btn ud-btn-edit">
+                    <i class="bi bi-pencil-square"></i> Düzenle
+                </a>
+                <a asp-action="Index" class="ud-btn ud-btn-back">
+                    <i class="bi bi-arrow-left"></i> Listeye Dön
+                </a>
+            </div>
+        </div>
+
+        <!-- Bilgi kutucukları -->
+        <div class="ud-grid">
+
+            <div class="ud-item">
+                <div class="ud-item-icon ud-ic-blue"><i class="bi bi-person-badge"></i></div>
+                <div class="ud-item-body">
+                    <div class="ud-label">Ad Soyad</div>
+                    <div class="ud-value">@adSoyad</div>
+                </div>
+            </div>
+
+            <div class="ud-item">
+                <div class="ud-item-icon ud-ic-purple"><i class="bi bi-at"></i></div>
+                <div class="ud-item-body">
+                    <div class="ud-label">Kullanıcı Adı</div>
+                    <div class="ud-value">@Model.Username</div>
+                </div>
+                <button type="button" class="ud-copy" data-copy="@Model.Username" title="Kopyala">
+                    <i class="bi bi-clipboard"></i>
+                </button>
+            </div>
+
+            <div class="ud-item">
+                <div class="ud-item-icon ud-ic-cyan"><i class="bi bi-envelope"></i></div>
+                <div class="ud-item-body">
+                    <div class="ud-label">E-Posta</div>
+                    @if (!string.IsNullOrWhiteSpace(Model.Email))
+                    {
+                        <a class="ud-value ud-link" href="mailto:@Model.Email">@Model.Email</a>
+                    }
+                    else
+                    {
+                        <div class="ud-value ud-empty">Belirtilmemiş</div>
+                    }
+                </div>
+                @if (!string.IsNullOrWhiteSpace(Model.Email))
+                {
+                    <button type="button" class="ud-copy" data-copy="@Model.Email" title="Kopyala">
+                        <i class="bi bi-clipboard"></i>
+                    </button>
+                }
+            </div>
+
+            <div class="ud-item">
+                <div class="ud-item-icon ud-ic-green"><i class="bi bi-telephone"></i></div>
+                <div class="ud-item-body">
+                    <div class="ud-label">Telefon</div>
+                    @if (!string.IsNullOrWhiteSpace(Model.PhoneNumber))
+                    {
+                        <a class="ud-value ud-link" href="tel:@Model.PhoneNumber">@Model.PhoneNumber</a>
+                    }
+                    else
+                    {
+                        <div class="ud-value ud-empty">Belirtilmemiş</div>
+                    }
+                </div>
+
+                <div class="ud-item ud-item-wide">
+                    <div class="ud-item-icon ud-ic-blue"><i class="bi bi-geo-alt"></i></div>
+                    <div class="ud-item-body">
+                        <div class="ud-label">Teslimat Adresi</div>
+                        @if (!string.IsNullOrWhiteSpace(Model.AddressLine))
+                        {
+                            <div class="ud-value">@Model.AddressLine, @Model.City @Model.PostalCode</div>
+                        }
+                        else
+                        {
+                            <div class="ud-value ud-empty">Henüz adres girilmemiş.</div>
+                        }
+                    </div>
+                </div>
+
+                @{
+                    var kart = ViewBag.SavedCard as MiniB2B.Models.SavedCard;
+                }
+                <div class="ud-item ud-item-wide">
+                    <div class="ud-item-icon ud-ic-purple"><i class="bi bi-credit-card"></i></div>
+                    <div class="ud-item-body">
+                        <div class="ud-label">Kayıtlı Kart</div>
+                        @if (kart != null)
+                        {
+                            <div class="ud-value">
+                                @kart.CardHolder — **** **** **** @kart.Last4
+                                <span class="text-muted small">(SKT: @kart.ExpiryMonth/@kart.ExpiryYear)</span>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="ud-value ud-empty">Henüz kayıtlı kart yok.</div>
+                        }
+                    </div>
+                </div>
+                @if (!string.IsNullOrWhiteSpace(Model.PhoneNumber))
+                {
+                    <button type="button" class="ud-copy" data-copy="@Model.PhoneNumber" title="Kopyala">
+                        <i class="bi bi-clipboard"></i>
+                    </button>
+                }
+            </div>
+
+            <div class="ud-item ud-item-wide">
+                <div class="ud-item-icon @(admin ? "ud-ic-red" : "ud-ic-orange")">
+                    <i class="bi @(admin ? "bi-shield-lock-fill" : "bi-shop")"></i>
+                </div>
+                <div class="ud-item-body">
+                    <div class="ud-label">Rol / Yetki</div>
+                    <div class="ud-value">@rolAdi</div>
+                    <div class="ud-hint">
+                        @if (admin)
+                        {
+                            <text>Ürün, kullanıcı, slider ve sipariş yönetimine erişebilir.</text>
+                        }
+                        else
+                        {
+                            <text>Ürün kataloğunu görüntüleyebilir, sepet ve sipariş oluşturabilir.</text>
+                        }
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="ud-toast" id="udToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill"></i> Kopyalandı
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/user-details.css" asp-append-version="true" />
+}
+
+@section Scripts {
+    <script src="~/js/user-details.js" asp-append-version="true"></script>
+}

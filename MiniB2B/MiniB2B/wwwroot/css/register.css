@@ -1,0 +1,91 @@
+﻿/* Register sayfasına özel eklemeler (temel stiller login.css'te) */
+
+/* Sayfa uzun olunca üst kısım kesilmesin: ortalamayı margin:auto ile yapıyoruz */
+.auth-page {
+    align-items: normal;
+    justify-content: normal;
+}
+
+.auth-shell {
+    margin: auto;
+}
+
+.auth-shell-lg {
+    max-width: 1020px;
+}
+
+    .auth-shell-lg .auth-form-wrap {
+        padding: 36px 40px;
+    }
+
+/* İki sütunlu satır */
+.auth-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 16px;
+    align-items: start;
+}
+
+.auth-optional {
+    font-weight: 400;
+    color: #98a2b3;
+}
+
+/* Şifre gücü göstergesi */
+.auth-strength {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    margin-top: 8px;
+}
+
+    .auth-strength span {
+        height: 4px;
+        border-radius: 4px;
+        background: #e4e7ec;
+        transition: background .25s;
+    }
+
+    .auth-strength[data-level="1"] span:nth-child(-n+1) {
+        background: #d92d20;
+    }
+
+    .auth-strength[data-level="2"] span:nth-child(-n+2) {
+        background: #f79009;
+    }
+
+    .auth-strength[data-level="3"] span:nth-child(-n+3) {
+        background: #eab308;
+    }
+
+    .auth-strength[data-level="4"] span:nth-child(-n+4) {
+        background: #12b76a;
+    }
+
+.auth-strength-text {
+    min-height: 18px;
+    margin-top: 4px;
+    font-size: .78rem;
+    color: #667085;
+}
+
+/* Şifre alanı toggle butonu için sağ boşluk yeterli, tekrar alanında toggle yok */
+#passwordConfirm {
+    padding-right: 14px;
+}
+
+@media (max-width: 860px) {
+    .auth-shell-lg {
+        max-width: 520px;
+    }
+
+        .auth-shell-lg .auth-form-wrap {
+            padding: 28px 22px;
+        }
+}
+
+@media (max-width: 520px) {
+    .auth-row {
+        grid-template-columns: 1fr;
+    }
+}

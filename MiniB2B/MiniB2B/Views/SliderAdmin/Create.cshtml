@@ -1,0 +1,122 @@
+﻿@model MiniB2B.Models.SliderItem
+
+@{
+    ViewData["Title"] = "Slider veya Afiş Ekle";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/slider-form.css" asp-append-version="true" />
+}
+
+<div class="slider-form-page">
+    <div class="slider-form-card">
+
+        <div class="slider-form-head">
+            <h2>Slider veya Afiş Ekle</h2>
+            <div class="form-sub">Anasayfa vitrinine yeni bir kampanya, afiş veya öne çıkan ürün ekleyin</div>
+        </div>
+
+        <form asp-action="Create" method="post" enctype="multipart/form-data" novalidate>
+
+            <!-- Ürün ID'sini ve mevcut resmi arkada tutmak için gizli inputlar -->
+            <input type="hidden" name="productId" value="@ViewBag.ProductId" />
+            <input type="hidden" asp-for="ImageUrl" />
+
+            <div class="slider-form-body">
+
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                <div class="form-section">
+                    <div class="form-section-title">Önizleme</div>
+                    <div class="slide-preview">
+                        @if (!string.IsNullOrEmpty(Model?.ImageUrl))
+                        {
+                            <div class="slide-preview-blur" style="background-image:url('@Model.ImageUrl')"></div>
+                            <img src="@Model.ImageUrl" class="slide-preview-img" alt="Önizleme" />
+                            <div class="slide-preview-caption">
+                                <h3>@Model.Title</h3>
+                                <p>@Model.Description</p>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="slide-preview-empty">
+                                <i class="bi bi-image"></i>
+                                <span>Görsel seçtiğinizde önizleme burada görünecek</span>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form-section-title">İçerik</div>
+
+                    <div class="mb-3">
+                        <label asp-for="Title" class="form-label">Başlık (Opsiyonel)</label>
+                        <input asp-for="Title" class="form-control" placeholder="Örn: Büyük Kampanya veya Ürün Adı" />
+                    </div>
+
+                    <div class="mb-1">
+                        <label asp-for="Description" class="form-label">Açıklama (Opsiyonel)</label>
+                        <textarea asp-for="Description" class="form-control" rows="2" placeholder="Kısa açıklama yazabilirsiniz..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form-section-title">Görsel</div>
+                    <label class="form-label">Görsel / Afiş</label>
+                    <div class="image-drop">
+                        <div class="image-drop-text">
+                            <strong>Görsel seçin ya da buraya sürükleyin</strong>
+                            <span class="file-name">Henüz dosya seçilmedi</span>
+                        </div>
+                        <input type="file" name="imageFile" accept="image/*" />
+                    </div>
+                    <div class="form-text mt-2">Ürün öne çıkarıyorsanız mevcut resim otomatik kullanılır. İsterseniz yeni resim yükleyerek değiştirebilirsiniz.</div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form-section-title">Bağlantı</div>
+                    <label asp-for="LinkUrl" class="form-label">Tıklayınca Gideceği Link (Opsiyonel)</label>
+                    <input asp-for="LinkUrl" class="form-control" placeholder="Örn: /Product/Details/5" />
+                    <div class="form-text">Ürün öne çıkarıldığında bu alan otomatik dolar. Boş da bırakabilirsiniz.</div>
+                </div>
+
+                <div class="form-section mb-0">
+                    <div class="form-section-title">Sıra ve Durum</div>
+                    <div class="order-active-row">
+                        <div class="order-field">
+                            <label asp-for="DisplayOrder" class="form-label">Görüntülenme Sırası</label>
+                            <input asp-for="DisplayOrder" type="number" class="form-control" value="1" />
+                        </div>
+                        <div class="order-field">
+                            <label class="form-label">&nbsp;</label>
+                            <div class="active-toggle">
+                                <input asp-for="IsActive" class="form-check-input" type="checkbox" checked />
+                                <label asp-for="IsActive">Hemen aktif et</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="slider-form-actions">
+                <a asp-action="Index" class="btn-cancel">
+                    <i class="bi bi-arrow-left"></i> Listeye Dön
+                </a>
+                <button type="submit" class="btn-save">
+                    <i class="bi bi-check-lg"></i> Kaydet ve Yayınla
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script src="~/js/slider-form.js" asp-append-version="true"></script>
+}

@@ -1,0 +1,177 @@
+﻿@model MiniB2B.Models.Basket
+
+@{
+    ViewData["Title"] = "Ödeme";
+    var toplam = Model.Items.Sum(i => i.UnitPrice * i.Quantity);
+}
+
+<div class="container mt-4">
+    <h2><i class="bi bi-credit-card"></i> Ödeme</h2>
+    <hr />
+
+    @if (ViewBag.Hata != null)
+    {
+        <div class="alert alert-danger">@ViewBag.Hata</div>
+    }
+
+    <!-- Ortada tik bildirimi -->
+    @if (TempData["Mesaj"] != null)
+    {
+        <div class="center-toast-overlay" id="mesajToast">
+            <div class="center-toast-box">
+                <div class="check-circle">
+                    <i class="bi bi-check-lg"></i>
+                </div>
+                <div class="center-toast-text">@TempData["Mesaj"]</div>
+            </div>
+        </div>
+    }
+
+    <div class="row g-4">
+        <!-- Adres + Kart formu -->
+        <div class="col-lg-7">
+            <div class="card shadow-sm">
+                <div class="card-body">
+
+                    <h5 class="mb-3">Teslimat Adresi</h5>
+                    <form asp-controller="Order" asp-action="Payment" method="post" id="paymentForm" autocomplete="on">
+
+                        <div class="mb-3">
+                            <label class="form-label">Adres</label>
+                            <input type="text" name="addressLine" class="form-control"
+                                   placeholder="Mahalle, cadde, no..." autocomplete="street-address" required />
+                        </div>
+
+                        <div class="row">
+                            <div class="col-8 mb-3">
+                                <label class="form-label">Şehir</label>
+                                <input type="text" name="city" class="form-control"
+                                       autocomplete="address-level2" required />
+                            </div>
+                            <div class="col-4 mb-3">
+                                <label class="form-label">Posta Kodu</label>
+                                <input type="text" name="postalCode" class="form-control"
+                                       autocomplete="postal-code" />
+                            </div>
+                        </div>
+
+                        <hr />
+                        <h5 class="mb-3">Kart Bilgileri</h5>
+
+                        <div class="mb-3">
+                            <label class="form-label">Kart Üzerindeki İsim</label>
+                            <input type="text" name="cardHolder" class="form-control" autocomplete="cc-name" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Kart Numarası</label>
+                            <input type="text" name="cardNumber" id="cardNumber" class="form-control"
+                                   inputmode="numeric" maxlength="19" placeholder="0000 0000 0000 0000"
+                                   autocomplete="cc-number" required />
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6 mb-3">
+                                <label class="form-label">Son Kullanma (AA/YY)</label>
+                                <input type="text" name="expiry" id="expiry" class="form-control"
+                                       inputmode="numeric" maxlength="5" placeholder="AA/YY"
+                                       autocomplete="cc-exp" required />
+                            </div>
+                            <div class="col-6 mb-3">
+                                <label class="form-label">CVV</label>
+                                <input type="password" name="cvv" class="form-control"
+                                       inputmode="numeric" maxlength="4" placeholder="•••"
+                                       autocomplete="cc-csc" required />
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <a asp-action="CartIndex" class="btn btn-outline-secondary">
+                                <i class="bi bi-arrow-left"></i> Sepete Dön
+                            </a>
+                            <button type="submit" class="btn btn-success btn-lg" id="payBtn">
+                                <i class="bi bi-lock-fill"></i> @toplam.ToString("N2") ₺ Öde
+                            </button>
+                        </div>
+                    </form>
+
+                    <p class="text-muted small mt-3 mb-0">
+                        <i class="bi bi-info-circle"></i>
+                        Test ortamı: geçerli örnek kart <code>4242 4242 4242 4242</code>, gelecek bir tarih ve herhangi bir CVV.
+                        Reddedilme testi için <code>4000 0000 0000 0002</code> kullanabilirsin.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sipariş özeti -->
+        <div class="col-lg-5">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="mb-3">Sipariş Özeti</h5>
+                    <ul class="list-group list-group-flush">
+                        @foreach (var item in Model.Items)
+                        {
+                            <li class="list-group-item d-flex justify-content-between px-0">
+                                <span>@item.Product?.ProductName <span class="text-muted">× @item.Quantity</span></span>
+                                <span>@((item.UnitPrice * item.Quantity).ToString("N2")) ₺</span>
+                            </li>
+                        }
+                    </ul>
+                    <div class="d-flex justify-content-between fw-bold fs-5 mt-3">
+                        <span>Toplam</span>
+                        <span class="text-success">@toplam.ToString("N2") ₺</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/product-details.css" asp-append-version="true" />
+}
+
+<script>
+    (function () {
+        var cardNumber = document.getElementById('cardNumber');
+        var expiry = document.getElementById('expiry');
+        var form = document.getElementById('paymentForm');
+        var payBtn = document.getElementById('payBtn');
+
+        // 4242 4242 4242 4242 biçiminde göster
+        cardNumber.addEventListener('input', function () {
+            var d = cardNumber.value.replace(/\D/g, '').substring(0, 16);
+            cardNumber.value = d.replace(/(.{4})/g, '$1 ').trim();
+        });
+
+        // AA/YY biçiminde göster
+        expiry.addEventListener('input', function () {
+            var d = expiry.value.replace(/\D/g, '').substring(0, 4);
+            expiry.value = d.length > 2 ? d.substring(0, 2) + '/' + d.substring(2) : d;
+        });
+
+        // Çift tıklamayla iki kez ödeme alınmasın
+        form.addEventListener('submit', function () {
+            payBtn.disabled = true;
+            payBtn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> İşleniyor...';
+        });
+    })();
+
+    // Ortada tik bildirimi
+    (function () {
+        var toastEl = document.getElementById('mesajToast');
+        if (toastEl) {
+            requestAnimationFrame(function () {
+                toastEl.classList.add('show');
+            });
+
+            setTimeout(function () {
+                toastEl.classList.remove('show');
+                setTimeout(function () {
+                    toastEl.remove();
+                }, 250);
+            }, 4000);
+        }
+    })();
+</script>

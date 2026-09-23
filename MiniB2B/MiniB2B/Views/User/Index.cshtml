@@ -1,0 +1,200 @@
+﻿@model List<MiniB2B.Models.User>
+@using System.Globalization
+
+@{
+    ViewData["Title"] = "Kullanıcı Yönetimi";
+
+    var kullanicilar = Model ?? new List<MiniB2B.Models.User>();
+    var tr = new CultureInfo("tr-TR");
+
+    bool IsAdminRole(string? role) => string.Equals(role, "Admin", StringComparison.OrdinalIgnoreCase);
+
+    string Initials(MiniB2B.Models.User u)
+    {
+        var f = (u.FirstName ?? "").Trim();
+        var l = (u.LastName ?? "").Trim();
+        var s = string.Concat(f.Take(1), l.Take(1));
+        if (string.IsNullOrEmpty(s)) s = (u.Username ?? "?").Trim().Take(1).FirstOrDefault().ToString();
+        return s.ToUpper(tr);
+    }
+
+    var toplam = kullanicilar.Count;
+    var adminSayisi = kullanicilar.Count(u => IsAdminRole(u.Role));
+    var bayiSayisi = toplam - adminSayisi;
+}
+
+<div class="um-page">
+
+    <!-- Başlık -->
+    <div class="um-header">
+        <div>
+            <h1 class="um-title">Kullanıcı Yönetimi</h1>
+            <p class="um-subtitle">Sistemdeki kullanıcıları görüntüleyin, rollerini ve bilgilerini yönetin.</p>
+        </div>
+    </div>
+
+    @if (TempData["Mesaj"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show um-alert" role="alert">
+            <i class="bi bi-check-circle-fill"></i> @TempData["Mesaj"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Kapat"></button>
+        </div>
+    }
+
+    <!-- İstatistikler -->
+    <div class="um-stats">
+        <div class="um-stat">
+            <div class="um-stat-icon bg-primary-soft"><i class="bi bi-people-fill"></i></div>
+            <div>
+                <div class="um-stat-value">@toplam</div>
+                <div class="um-stat-label">Toplam Kullanıcı</div>
+            </div>
+        </div>
+        <div class="um-stat">
+            <div class="um-stat-icon bg-danger-soft"><i class="bi bi-shield-lock-fill"></i></div>
+            <div>
+                <div class="um-stat-value">@adminSayisi</div>
+                <div class="um-stat-label">Yönetici</div>
+            </div>
+        </div>
+        <div class="um-stat">
+            <div class="um-stat-icon bg-success-soft"><i class="bi bi-shop"></i></div>
+            <div>
+                <div class="um-stat-value">@bayiSayisi</div>
+                <div class="um-stat-label">Bayi / Müşteri</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Arama + filtre -->
+    <div class="um-toolbar">
+        <div class="um-search">
+            <i class="bi bi-search"></i>
+            <input type="text" id="umSearch" placeholder="Ad, kullanıcı adı, e-posta veya telefon ile ara...  ( / )" autocomplete="off" />
+            <button type="button" class="um-search-clear" id="umSearchClear" title="Temizle" hidden>
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+
+        <div class="um-chips" id="umChips">
+            <button type="button" class="um-chip active" data-filter="all">Tümü <span>@toplam</span></button>
+            <button type="button" class="um-chip" data-filter="admin">Yönetici <span>@adminSayisi</span></button>
+            <button type="button" class="um-chip" data-filter="user">Bayi <span>@bayiSayisi</span></button>
+        </div>
+    </div>
+
+    @if (!kullanicilar.Any())
+    {
+        <div class="um-empty">
+            <i class="bi bi-person-x"></i>
+            <h5>Kullanıcı bulunamadı</h5>
+            <p>Sistemde kayıtlı kullanıcı bulunmuyor.</p>
+        </div>
+    }
+    else
+    {
+        <div class="um-card">
+            <div class="um-card-head">
+                <span id="umCount">@toplam kullanıcı gösteriliyor</span>
+                <span class="um-hint d-none d-md-inline"><i class="bi bi-arrow-down-up"></i> Sıralamak için sütun başlığına tıklayın</span>
+            </div>
+
+            <div class="table-responsive">
+                <table class="um-table" id="umTable">
+                    <thead>
+                        <tr>
+                            <th class="um-sortable">Kullanıcı</th>
+                            <th class="um-sortable">E-Posta</th>
+                            <th class="um-sortable">Telefon</th>
+                            <th class="um-sortable">Rol</th>
+                            <th class="text-end">İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var user in kullanicilar)
+                        {
+                            var admin = IsAdminRole(user.Role);
+                            var adSoyad = ((user.FirstName ?? "") + " " + (user.LastName ?? "")).Trim();
+                            var avatarClass = "um-av-" + (Math.Abs(user.Id) % 6);
+
+                            <tr class="um-row" data-role="@(admin ? "admin" : "user")">
+                                <td data-value="@adSoyad.ToLower(tr)">
+                                    <div class="um-user">
+                                        <div class="um-avatar @avatarClass">@Initials(user)</div>
+                                        <div class="um-user-info">
+                                            <a asp-action="Details" asp-route-id="@user.Id" class="um-name">@(string.IsNullOrEmpty(adSoyad) ? user.Username : adSoyad)</a>
+                                            <div class="um-username">@@@user.Username</div>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td data-value="@((user.Email ?? "").ToLower(tr))">
+                                    @if (!string.IsNullOrWhiteSpace(user.Email))
+                                    {
+                                        <div class="um-email">
+                                            <a href="mailto:@user.Email">@user.Email</a>
+                                            <button type="button" class="um-copy" data-copy="@user.Email" title="E-postayı kopyala">
+                                                <i class="bi bi-clipboard"></i>
+                                            </button>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <span class="um-muted">-</span>
+                                    }
+                                </td>
+
+                                <td data-value="@(user.PhoneNumber ?? "")">
+                                    @if (!string.IsNullOrWhiteSpace(user.PhoneNumber))
+                                    {
+                                        <a href="tel:@user.PhoneNumber" class="um-phone"><i class="bi bi-telephone"></i> @user.PhoneNumber</a>
+                                    }
+                                    else
+                                    {
+                                        <span class="um-muted">-</span>
+                                    }
+                                </td>
+
+                                <td data-value="@(user.Role ?? "")">
+                                    @if (admin)
+                                    {
+                                        <span class="um-role um-role-admin"><i class="bi bi-shield-lock-fill"></i> Yönetici</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="um-role um-role-user"><i class="bi bi-shop"></i> @(string.IsNullOrEmpty(user.Role) ? "Bayi" : user.Role)</span>
+                                    }
+                                </td>
+
+                                <td class="text-end">
+                                    <div class="um-actions">
+                                        <a asp-action="Details" asp-route-id="@user.Id" class="um-act um-act-info" title="Görüntüle">
+                                            <i class="bi bi-eye"></i><span>Görüntüle</span>
+                                        </a>
+                                        <a asp-action="Edit" asp-route-id="@user.Id" class="um-act um-act-edit" title="Düzenle">
+                                            <i class="bi bi-pencil-square"></i><span>Düzenle</span>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+
+                        <tr id="umNoResult" hidden>
+                            <td colspan="5" class="um-noresult">
+                                <i class="bi bi-search"></i> Aramanıza uyan kullanıcı yok.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/user-index.css" asp-append-version="true" />
+}
+
+@section Scripts {
+    <script src="~/js/user-index.js" asp-append-version="true"></script>
+}

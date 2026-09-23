@@ -1,0 +1,141 @@
+﻿@model MiniB2B.ViewModels.GridCellViewModel
+@using System.Globalization
+@{
+    var col = Model.Column;
+    var product = Model.Product;
+    var rawValue = MiniB2B.Helpers.DynamicPropertyReader.GetValue(product, col.PropertyName);
+
+    var tdClass = MiniB2B.Helpers.GridColumnRenderHelper.CellClass(col);
+    var tdStyle = MiniB2B.Helpers.GridColumnRenderHelper.WidthStyle(col);
+}
+
+@switch (col.RenderType)
+{
+    case "Text":
+        <td class="@tdClass" style="@tdStyle" data-value="@(rawValue?.ToString()?.ToLowerInvariant() ?? "")">
+            @if (string.Equals(col.PropertyName, "ProductName", StringComparison.OrdinalIgnoreCase))
+            {
+                <a asp-controller="Product" asp-action="Details" asp-route-id="@product.Id" class="pi-name">@rawValue</a>
+                if (Model.IsAdmin && Model.IsFeatured)
+                {
+                    <span class="pi-star" title="Slider'da öne çıkarılıyor"><i class="bi bi-star-fill"></i></span>
+                }
+                <div class="pi-code">@product.ProductCode @(product.Category != null ? "· " + product.Category.Name : "")</div>
+            }
+            else if (string.Equals(col.PropertyName, "Brand", StringComparison.OrdinalIgnoreCase))
+            {
+                <span class="pi-brand">@rawValue</span>
+            }
+            else
+            {
+                @(string.IsNullOrEmpty(rawValue as string) && rawValue is string ? "-" : rawValue)
+            }
+        </td>
+        break;
+
+    case "Image":
+        <td class="pi-col-img @tdClass" style="@tdStyle">
+            @if (!string.IsNullOrEmpty(rawValue as string))
+            {
+                <button type="button" class="pi-thumb" data-bs-toggle="modal" data-bs-target="#imgModal"
+                        data-img="@rawValue" data-title="@product.ProductName" title="Büyüt">
+                    <img src="@rawValue" alt="@product.ProductName" loading="lazy" />
+                </button>
+            }
+            else
+            {
+                <div class="pi-thumb pi-thumb-empty"><i class="bi bi-image"></i></div>
+            }
+        </td>
+        break;
+
+    case "Currency":
+        {
+            var price = rawValue is decimal d ? d : 0m;
+            <td class="pi-price @tdClass" style="@tdStyle" data-value="@price.ToString(CultureInfo.InvariantCulture)">
+                @price.ToString("N2") ₺
+            </td>
+            break;
+        }
+
+    case "Badge":
+        {
+            if (string.Equals(col.PropertyName, "StockQuantity", StringComparison.OrdinalIgnoreCase))
+            {
+                var stok = product.StockQuantity;
+                var kritikSeviye = product.CriticalStockQuantity;
+
+                <td class="@tdClass" style="@tdStyle" data-value="@stok">
+                    @if (stok <= 0)
+                    {
+                        <span class="pi-badge pi-badge-danger">Yok</span>
+                    }
+                    else if (stok <= kritikSeviye)
+                    {
+                        <span class="pi-badge pi-badge-warning">Kritik</span>
+                    }
+                    else
+                    {
+                        <span class="pi-badge pi-badge-success">Var</span>
+                    }
+                </td>
+            }
+            else
+            {
+                <td class="@tdClass" style="@tdStyle"><span class="pi-badge pi-badge-success">@rawValue</span></td>
+            }
+            break;
+        }
+
+    case "Input":
+        <td class="@tdClass" style="@tdStyle">
+            <form asp-controller="Order" asp-action="AddToCart" method="post" class="d-flex gap-1 align-items-center">
+                <input type="hidden" name="productId" value="@product.Id" />
+                <input type="number" name="adet" value="1" min="1" max="@product.StockQuantity"
+                       class="form-control form-control-sm" style="width:65px"
+                       @(product.StockQuantity <= 0 ? "disabled" : "") />
+                <button type="submit" class="btn btn-sm btn-primary" title="Sepete Ekle"
+                        @(product.StockQuantity <= 0 ? "disabled" : "")>
+                    <i class="bi bi-cart-plus"></i>
+                </button>
+            </form>
+        </td>
+        break;
+
+    case "Action":
+        <td class="@tdClass" style="@tdStyle">
+            <div class="pi-actions">
+                <a asp-controller="Product" asp-action="Details" asp-route-id="@product.Id" class="pi-act pi-act-info" title="Detay">
+                    <i class="bi bi-eye"></i><span>Detay</span>
+                </a>
+
+                @if (Model.IsAdmin)
+                {
+                    <a asp-controller="Product" asp-action="Edit" asp-route-id="@product.Id" class="pi-act pi-act-edit" title="Düzenle">
+                        <i class="bi bi-pencil-square"></i><span>Düzenle</span>
+                    </a>
+
+                    if (Model.IsFeatured)
+                    {
+                        <button type="button" class="pi-act pi-act-featured" title="Öne çıkarmadan kaldır"
+                                data-bs-toggle="modal" data-bs-target="#removeFeaturedModal"
+                                data-product-id="@product.Id" data-product-name="@product.ProductName">
+                            <i class="bi bi-star-fill"></i><span>Öne Çıkarıldı</span>
+                        </button>
+                    }
+                    else
+                    {
+                        <a asp-controller="SliderAdmin" asp-action="Create" asp-route-productId="@product.Id"
+                           class="pi-act pi-act-feature" title="Slider'da öne çıkar">
+                            <i class="bi bi-star"></i><span>Öne Çıkar</span>
+                        </a>
+                    }
+                }
+            </div>
+        </td>
+        break;
+
+    default:
+        <td class="@tdClass" style="@tdStyle">@rawValue</td>
+        break;
+}

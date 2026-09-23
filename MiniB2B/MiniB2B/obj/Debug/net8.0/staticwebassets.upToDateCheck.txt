@@ -1,0 +1,127 @@
+wwwroot\css\basket.css
+wwwroot\css\home.css
+wwwroot\css\layout.css
+wwwroot\css\login.css
+wwwroot\css\my-orders.css
+wwwroot\css\order-detail.css
+wwwroot\css\order-management.css
+wwwroot\css\product-details.css
+wwwroot\css\product-form.css
+wwwroot\css\product-index.css
+wwwroot\css\register.css
+wwwroot\css\slider-form.css
+wwwroot\css\slider-index.css
+wwwroot\css\user-details.css
+wwwroot\css\user-edit.css
+wwwroot\css\user-index.css
+wwwroot\favicon.ico
+wwwroot\images\slider\1174b2ab-f236-44ea-8998-758749c298d0_en-cok-satan-araba-modelleri.jpg
+wwwroot\images\slider\38361382-c7e6-4ac0-92fc-30d492f88e51_ebru resim.png
+wwwroot\images\slider\48628875-050d-4648-a1f0-4df94f135d0c_Ekran görüntüsü 2025-09-17 133832.png
+wwwroot\images\slider\497a3612-4abb-46b2-bf69-f65f8424f943_WhatsApp Image 2026-04-14 at 13.55.05.jpeg
+wwwroot\images\slider\49a8579e-ab7d-4a90-999e-c29075192d69_images.jpg
+wwwroot\images\slider\4f07ee4e-daab-43bd-84fc-8fcdaf84d98b_Ekran görüntüsü 2025-09-21 233506.png
+wwwroot\images\slider\5f78f217-78f2-48f6-8eac-8bea89354af9_en-cok-satan-araba-modelleri.jpg
+wwwroot\images\slider\66770ea5-881a-49a6-9c5f-60347b7247f7_ebru resim.png
+wwwroot\images\slider\6c4fa4da-fc13-4088-bb54-b05d8f0720bb_philips.jpg
+wwwroot\images\slider\820f1dd4-4784-4722-b7d3-5e670b66feb7_images.jpg
+wwwroot\images\slider\98aaa5ab-6952-4452-ab05-dfa2111a3a6a_Ekran görüntüsü 2025-09-17 145915.png
+wwwroot\images\slider\a1e884ea-89a8-45ce-92f0-d96c1ed72754_WhatsApp Image 2026-04-14 at 13.55.05.jpeg
+wwwroot\images\slider\a862f964-dc56-4a5c-8241-36a9eda23cd8_images.jpg
+wwwroot\images\slider\ae400ffb-ad61-47b9-a1d1-67242c299132_Ekran görüntüsü 2025-09-17 145915.png
+wwwroot\images\slider\bf283afc-79c8-4052-ad01-a8ba90f1295b_tia.png
+wwwroot\images\slider\c421e532-419e-4fb4-8348-808ca86ecd0d_38237622.webp
+wwwroot\images\slider\d0cf6e28-7874-451c-80a1-6a41cb27d7ba_en-cok-satan-araba-modelleri.jpg
+wwwroot\images\slider\d29bd041-44a8-4755-be9c-70ba51d4a1c1_Ekran görüntüsü 2026-03-03 144240.png
+wwwroot\images\slider\e9e6960e-b0ed-405b-88d0-dcf3a99211c2_38237622.webp
+wwwroot\images\slider\fbf25632-ec8e-4536-a4c2-ccf1d20a696f_38237622.webp
+wwwroot\js\basket.js
+wwwroot\js\home.js
+wwwroot\js\layout.js
+wwwroot\js\login.js
+wwwroot\js\my-orders.js
+wwwroot\js\order-detail.js
+wwwroot\js\order-management.js
+wwwroot\js\product-details.js
+wwwroot\js\product-form.js
+wwwroot\js\product-index.js
+wwwroot\js\register.js
+wwwroot\js\slider-form.js
+wwwroot\js\slider-index.js
+wwwroot\js\user-details.js
+wwwroot\js\user-edit.js
+wwwroot\js\user-index.js
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+wwwroot\lib\bootstrap\LICENSE
+wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
+wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
+wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\lib\jquery-validation\dist\additional-methods.js
+wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+wwwroot\lib\jquery-validation\dist\jquery.validate.js
+wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+wwwroot\lib\jquery-validation\LICENSE.md
+wwwroot\lib\jquery\dist\jquery.js
+wwwroot\lib\jquery\dist\jquery.min.js
+wwwroot\lib\jquery\dist\jquery.min.map
+wwwroot\lib\jquery\LICENSE.txt
+wwwroot\uploads\1398f1b7-861a-4100-a18d-2bc1db480bd9_Ekran görüntüsü 2025-09-21 232323.png
+wwwroot\uploads\189b4303-1de6-448e-8e8a-d7b4ca055a1b_ebru resim.png
+wwwroot\uploads\25d9770c-24f7-426c-b189-2dd5f215273a_unnamed.png
+wwwroot\uploads\2cf60aec-27dd-490b-90c9-26744457713e_110001179630556.jpg
+wwwroot\uploads\5060a538-ebd7-4cf3-a35e-f1ca1ba8a3de_110001179630556.jpg
+wwwroot\uploads\5b29fa34-d95f-4682-9e76-22aa45a2ef27_38237622.webp
+wwwroot\uploads\5f827a9d-f0c8-4860-920f-87561d28bcbf_unnamed.png
+wwwroot\uploads\62ceaa52-e3a8-4b47-9ab5-2a708f04174e_images.jpg
+wwwroot\uploads\864fabe7-232d-4758-bc86-04fc22b85c35_images.jpg
+wwwroot\uploads\a02d197d-cb95-43a8-a996-7c324002e7b6_110001179630556.jpg
+wwwroot\uploads\ba01ef76-f41d-4e97-8466-8e779a8a6c24_images.jpg
+wwwroot\uploads\c211ea0d-d759-4fb9-8c85-05aac78fc48c_ebru resim.png
+wwwroot\uploads\d14893d4-b991-45a3-bec8-3bb744d32fb4_38237622.webp
+wwwroot\uploads\df74d84c-9adc-479b-95ba-ef475b5b861c_images.jpg
+wwwroot\uploads\e077a438-0dad-4fb8-98e9-e1dbc201eac2_unnamed.png
+wwwroot\uploads\eefddb2c-c7cb-4172-951e-a902d23b2f97_en-cok-satan-araba-modelleri.jpg
+wwwroot\uploads\f4e1a149-03fa-4eae-af88-4981cea2ec2e_WhatsApp Image 2026-04-14 at 13.55.05.jpeg

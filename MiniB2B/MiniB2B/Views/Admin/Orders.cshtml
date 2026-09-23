@@ -1,0 +1,135 @@
+﻿@model IEnumerable<MiniB2B.Models.Order>
+
+@{
+    ViewData["Title"] = "Sipariş Yönetimi";
+}
+
+<link rel="stylesheet" href="~/css/order-detail.css?v=2" />
+<link rel="stylesheet" href="~/css/order-management.css?v=2" />
+
+
+<div class="container mt-4 order-management">
+    <div class="page-header d-flex align-items-center justify-content-between flex-wrap gap-2">
+        <h2 class="mb-0"><i class="bi bi-cart-check"></i> Sipariş Yönetimi <span class="text-muted fs-6">(Yönetici Paneli)</span></h2>
+
+        <div class="search-box">
+            <i class="bi bi-search"></i>
+            <input type="text" id="orderSearch" class="form-control" placeholder="Sipariş no veya müşteri ara..." />
+        </div>
+    </div>
+    <hr />
+
+    @if (TempData["Mesaj"] != null)
+    {
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+            @TempData["Mesaj"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <!-- Durum filtre sekmeleri -->
+    <div class="status-filters mb-3">
+        <button class="filter-btn active" data-filter="all">Tümü</button>
+        <button class="filter-btn" data-filter="Onay Bekliyor">Onay Bekliyor</button>
+        <button class="filter-btn" data-filter="Onaylandı">Onaylandı</button>
+        <button class="filter-btn" data-filter="Hazırlanıyor">Hazırlanıyor</button>
+        <button class="filter-btn" data-filter="Araca Yüklendi">Araca Yüklendi</button>
+        <button class="filter-btn" data-filter="Kargoya Verildi">Kargoya Verildi</button>
+        <button class="filter-btn" data-filter="Yola Çıktı">Yola Çıktı</button>
+        <button class="filter-btn" data-filter="Teslim Edildi">Teslim Edildi</button>
+        <button class="filter-btn" data-filter="Reddedildi">Reddedildi</button>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0" id="ordersTable">
+                <thead class="table-light">
+                    <tr>
+                        <th>Sipariş No</th>
+                        <th>Müşteri (Kullanıcı ID)</th>
+                        <th>Sipariş Tarihi</th>
+                        <th>Toplam Tutar</th>
+                        <th>Durum</th>
+                        <th class="text-end">İşlemler & Durum Değiştir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        @foreach (var order in Model)
+                        {
+                            var sonrakiDurum = MiniB2B.Services.OrderService.SonrakiDurum(order.Status);
+                            var reddedilebilir = order.Status == "Onay Bekliyor";
+                            var ilerletilebilir = sonrakiDurum != null && order.Status != "Reddedildi" && order.Status != "İptal Edildi";
+
+                            <tr class="order-row" data-status="@order.Status"
+                                data-search="@($"{order.OrderNumber} {(order.User != null ? order.User.FirstName + " " + order.User.LastName : "Kullanıcı #" + order.UserId)}".ToLower())">
+                                <td class="fw-bold">@order.OrderNumber</td>
+                                <td>@(order.User != null ? $"{order.User.FirstName} {order.User.LastName}" : $"Kullanıcı #{order.UserId}")</td>
+                                <td>@order.OrderDate.ToString("dd.MM.yyyy HH:mm")</td>
+                                <td class="text-success fw-bold">@order.TotalAmount.ToString("N2") ₺</td>
+                                <td>
+                                    <span class="badge bg-@(MiniB2B.Services.OrderService.Renk(order.Status)) fs-6">@order.Status</span>
+                                </td>
+                                <td class="text-end">
+                                    <a asp-action="Details" asp-route-id="@order.Id" class="btn btn-sm btn-outline-primary me-1">
+                                        <i class="bi bi-eye"></i> Detay
+                                    </a>
+
+                                    @if (reddedilebilir)
+                                    {
+                                        <form asp-action="UpdateOrderStatus" method="post" class="d-inline status-form">
+                                            <input type="hidden" name="id" value="@order.Id" />
+                                            <button type="submit" name="status" value="Reddedildi" class="btn btn-sm btn-danger js-confirm"
+                                                    data-confirm-text="Bu siparişi reddetmek istediğinize emin misiniz?" title="Reddet">
+                                                <i class="bi bi-x-lg"></i> Reddet
+                                            </button>
+                                        </form>
+                                    }
+
+                                    @if (ilerletilebilir)
+                                    {
+                                        <form asp-action="UpdateOrderStatus" method="post" class="d-inline status-form">
+                                            <input type="hidden" name="id" value="@order.Id" />
+                                            <button type="submit" name="status" value="İlerlet" class="btn btn-sm btn-success js-confirm"
+                                                    data-confirm-text="Sipariş '@sonrakiDurum' durumuna geçirilecek. Emin misiniz?"
+                                                    title="@MiniB2B.Services.OrderService.ButonMetni(sonrakiDurum!)">
+                                                <i class="bi bi-arrow-right-circle"></i> @MiniB2B.Services.OrderService.ButonMetni(sonrakiDurum!)
+                                            </button>
+                                        </form>
+                                    }
+
+                                    @if (order.Status == "Teslim Edildi")
+                                    {
+                                        <span class="badge bg-success">Tamamlandı</span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="6" class="text-center text-muted py-3">Sistemde kayıtlı sipariş bulunmamaktadır.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <p class="text-muted small mt-2" id="rowCountInfo"></p>
+</div>
+
+<!-- İşlem sırasında gösterilecek onay modalı -->
+<div class="confirm-overlay" id="confirmOverlay">
+    <div class="confirm-box">
+        <p id="confirmText">Emin misiniz?</p>
+        <div class="confirm-actions">
+            <button type="button" class="btn btn-secondary btn-sm" id="confirmCancel">Vazgeç</button>
+            <button type="button" class="btn btn-primary btn-sm" id="confirmOk">Onayla</button>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/order-management.js"></script>

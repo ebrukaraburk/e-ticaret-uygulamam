@@ -1,0 +1,122 @@
+﻿@model MiniB2B.Models.Basket
+
+@{
+    ViewData["Title"] = "Sepetim";
+}
+
+<link rel="stylesheet" href="~/css/basket.css" />
+
+<div class="container mt-4 basket-page">
+    <h2><i class="bi bi-cart3"></i> Sepetim</h2>
+    <hr />
+
+    @if (TempData["Mesaj"] != null)
+    {
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+            @TempData["Mesaj"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    @if (Model == null || !Model.Items.Any())
+    {
+        <div class="empty-basket text-center py-5">
+            <i class="bi bi-cart-x display-1 text-muted"></i>
+            <div class="alert alert-warning d-inline-block mt-3">Sepetinizde henüz ürün bulunmamaktadır.</div>
+            <div>
+                <a asp-controller="Product" asp-action="Index" class="btn btn-primary">
+                    <i class="bi bi-grid"></i> Ürün Kataloğuna Dön
+                </a>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive card shadow-sm mb-4">
+            <table class="table table-hover mb-0" id="basketTable">
+                <thead class="table-light">
+                    <tr>
+                        <th>Ürün Kodu</th>
+                        <th>Ürün Adı</th>
+                        <th>Birim Fiyat</th>
+                        <th>Adet</th>
+                        <th>Toplam Tutar</th>
+                        <th class="text-end">İşlem</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Items)
+                    {
+                        var guncelFiyat = item.Product?.UnitPrice ?? 0m;
+                        var satirToplam = guncelFiyat * item.Quantity;
+
+                        <tr>
+                            <td class="align-middle">@item.Product?.ProductCode</td>
+                            <td class="align-middle fw-bold">@item.Product?.ProductName</td>
+                            <td class="align-middle" data-unit-price="@guncelFiyat">@guncelFiyat.ToString("N2") ₺</td>
+                            <td class="align-middle">
+                                <div class="qty-stepper">
+                                    <form asp-controller="Order" asp-action="UpdateCartQuantity" method="post" class="d-inline">
+                                        <input type="hidden" name="itemId" value="@item.Id" />
+                                        <input type="hidden" name="delta" value="-1" />
+                                        <button type="submit" class="btn btn-sm btn-outline-secondary qty-btn" title="Azalt">−</button>
+                                    </form>
+                                    <span class="qty-badge">@item.Quantity</span>
+                                    <form asp-controller="Order" asp-action="UpdateCartQuantity" method="post" class="d-inline">
+                                        <input type="hidden" name="itemId" value="@item.Id" />
+                                        <input type="hidden" name="delta" value="1" />
+                                        <button type="submit" class="btn btn-sm btn-outline-secondary qty-btn" title="Artır">+</button>
+                                    </form>
+                                </div>
+                            </td>
+                            <td class="align-middle text-success fw-bold" data-line-total="@satirToplam">
+                                @satirToplam.ToString("N2") ₺
+                            </td>
+                            <td class="align-middle text-end">
+                                <form asp-controller="Order" asp-action="RemoveFromCart" method="post" class="d-inline remove-item-form">
+                                    <input type="hidden" name="itemId" value="@item.Id" />
+                                    <button type="button" class="btn btn-sm btn-outline-danger js-remove-confirm"
+                                            data-product-name="@item.Product?.ProductName">
+                                        <i class="bi bi-trash"></i> Sepetten Kaldır
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr class="basket-total-row">
+                        <td colspan="4" class="text-end fw-bold">Genel Toplam</td>
+                        <td class="fw-bold text-success fs-5" id="basketGrandTotal">
+                            @(Model.Items.Sum(i => (i.Product?.UnitPrice ?? 0m) * i.Quantity).ToString("N2")) ₺
+                        </td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <!-- Siparişi Onayla Butonu -->
+        <div class="text-end">
+            <form asp-controller="Order" asp-action="ConfirmOrder" method="post" id="confirmOrderForm">
+                <button type="submit" class="btn btn-success btn-lg shadow-sm" id="confirmOrderBtn">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span class="btn-text">Siparişi Onayla ve Oluştur</span>
+                </button>
+            </form>
+        </div>
+    }
+</div>
+
+<div class="confirm-overlay" id="confirmOverlay">
+    <div class="confirm-box">
+        <i class="bi bi-question-circle display-6 text-warning" id="confirmIcon"></i>
+        <p class="mt-2 mb-1" id="confirmMessage">Emin misiniz?</p>
+        <div class="confirm-actions">
+            <button type="button" class="btn btn-secondary btn-sm" id="confirmCancel">Vazgeç</button>
+            <button type="button" class="btn btn-primary btn-sm" id="confirmOk">Evet</button>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/basket.js"></script>

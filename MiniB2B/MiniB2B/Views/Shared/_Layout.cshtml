@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MiniB2B</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Harici Site CSS -->
+    <link rel="stylesheet" href="~/css/layout.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MiniB2B.styles.css" asp-append-version="true" />
+    @await RenderSectionAsync("Styles", required: false)
+
+</head>
+<body>
+
+    @{
+        var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+        var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+    }
+
+    @if (currentController != "Account")
+    {
+        <!-- ÜST NAVBAR -->
+        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #0e2238; z-index: 1050;">
+            <div class="container-fluid">
+                <!-- Sol Kısım: Sidebar Aç/Kapat Butonu ve Logo -->
+                <div class="d-flex align-items-center">
+                    <button class="btn text-white me-2" id="sidebarToggle" type="button" style="background: transparent; border: none;" title="Menüyü Aç/Kapat">
+                        <i class="bi bi-list fs-4"></i>
+                    </button>
+                    <a class="navbar-brand text-white fw-bold fs-6 m-0 text-decoration-none" asp-controller="Home" asp-action="Index">
+                        <i class="bi bi-box-seam-fill text-info"></i> MiniB2B Bayi Sipariş Portalı
+                    </a>
+                </div>
+
+                <!-- Sağ Kısım: Kullanıcı Bilgisi ve Çıkış / Giriş Linkleri -->
+                <div class="navbar-right d-flex align-items-center">
+                    @if (User.Identity != null && User.Identity.IsAuthenticated)
+                    {
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-person-circle fs-5 me-1"></i> <span class="d-none d-md-inline">@User.Identity.Name</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow">
+                                <li><span class="dropdown-item-text text-muted small">Rol: @(User.IsInRole("Admin") ? "Yönetici (Admin)" : "Bayi (Müşteri)")</span></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" asp-controller="Profile" asp-action="Index"><i class="bi bi-person-fill"></i> Profilim</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-danger" asp-controller="Account" asp-action="Logout"><i class="bi bi-box-arrow-right"></i> Çıkış Yap</a></li>
+                            </ul>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="d-flex gap-2">
+                            <a class="btn btn-outline-light btn-sm" asp-controller="Account" asp-action="Login">Giriş Yap</a>
+                            <a class="btn btn-light btn-sm text-primary fw-bold" asp-controller="Account" asp-action="Register">Kayıt Ol</a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </nav>
+
+        <!-- ANA WRAPPER (SIDEBAR + İÇERİK) -->
+        <div class="wrapper">
+
+            <!-- Mobilde sidebar açıkken arkayı karartan katman -->
+            <div class="sidebar-backdrop"></div>
+
+            <!-- SOL SİDEBAR -->
+            <aside id="sidebar">
+                <div class="d-flex flex-column justify-content-between h-100 p-3">
+                    <div>
+                        <!-- Logo / Marka Alanı -->
+                        <div class="text-center mb-3 pb-2 border-bottom border-secondary">
+                            <h5 class="fw-bold text-info m-0"><i class="bi bi-box-seam-fill"></i> MiniB2B</h5>
+                            <small class="text-white-50" style="font-size: 0.75rem;">Sipariş Yönetim Sistemi</small>
+                        </div>
+
+                        <!-- Menü Linkleri -->
+                        <ul class="nav flex-column gap-1">
+                            <li class="nav-item">
+                                <a class="sidebar-link @(currentController == "Home" && currentAction == "Index" ? "active" : "")" asp-controller="Home" asp-action="Index">
+                                    <i class="bi bi-house-door-fill"></i> <span>Anasayfa</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="sidebar-link @(currentController == "Product" && User.IsInRole("Admin") == false ? "active" : "")" asp-controller="Product" asp-action="Index">
+                                    <i class="bi bi-grid-fill"></i> <span>Ürün Kataloğu</span>
+                                </a>
+                            </li>
+
+                            <!-- Müşteri Menüleri -->
+                            @if (User.Identity != null && User.Identity.IsAuthenticated && !User.IsInRole("Admin"))
+                            {
+                                <li class="nav-item">
+                                    <a class="sidebar-link @(currentController == "Order" && currentAction == "CartIndex" ? "active" : "")" asp-controller="Order" asp-action="CartIndex">
+                                        <i class="bi bi-cart3"></i> <span>Sepetim</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="sidebar-link @(currentController == "Order" ? "active" : "")" asp-controller="Order" asp-action="MyOrders">
+                                        <i class="bi bi-box-seam"></i> <span>Siparişlerim</span>
+                                    </a>
+                                </li>
+                            }
+
+                            <!-- Admin Yönetim Paneli Linkleri -->
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <li class="nav-item mt-3 mb-1">
+                                    <span class="text-uppercase text-white-50 px-3 fw-bold" style="font-size: 0.7rem; letter-spacing: 0.5px;">Yönetim Paneli</span>
+                                </li>
+
+                                <!-- Slider / Kampanya Yönetimi (sadece Admin görür) -->
+                                <li class="nav-item">
+                                    <a class="sidebar-link @(currentController == "SliderAdmin" ? "active" : "")" asp-controller="SliderAdmin" asp-action="Index">
+                                        <i class="bi bi-images"></i> <span>Slider / Kampanya Yönetimi</span>
+                                    </a>
+                                </li>
+                                <!-- Ürün Yönetimi -->
+                                <li class="nav-item">
+                                    <a class="sidebar-link @(currentController == "Product" ? "active" : "")" asp-controller="Product" asp-action="Index">
+                                        <i class="bi bi-gear-fill"></i> <span>Ürün Yönetimi</span>
+                                    </a>
+                                </li>
+
+                                <!-- Kullanıcı Yönetimi -->
+                                <li class="nav-item">
+                                    <a class="sidebar-link @(currentController == "User" ? "active" : "")" asp-controller="User" asp-action="Index">
+                                        <i class="bi bi-people-fill"></i> <span>Kullanıcı Yönetimi</span>
+                                    </a>
+                                </li>
+
+                                <!-- Sipariş Yönetimi -->
+                                <li class="nav-item">
+                                    <a class="sidebar-link @(currentController == "Order" && currentAction == "Orders" ? "active" : "")" asp-controller="Order" asp-action="Orders">
+                                        <i class="bi bi-clipboard-check-fill"></i> <span>Sipariş Yönetimi</span>
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+
+                    <!-- Sidebar Alt Çıkış Yap Butonu -->
+                    <div class="sidebar-footer pt-3 border-top border-secondary">
+                        <a class="sidebar-link" asp-controller="Account" asp-action="Logout">
+                            <i class="bi bi-box-arrow-right"></i> <span>Çıkış Yap</span>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- SAĞ ANA İÇERİK ALANI -->
+            <div class="main p-4">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+
+                <!-- Footer -->
+                <footer class="border-top text-muted text-center py-3 bg-white mt-5 rounded shadow-sm">
+                    <div class="container-fluid">
+                        &copy; 2026 - MiniB2B - B2B E-Ticaret ve Sipariş Yönetim Sistemi
+                    </div>
+                </footer>
+            </div>
+        </div>
+    }
+    else
+    {
+        <!-- Account (Giriş/Kayıt) sayfaları için sade görünüm -->
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    }
+
+    <!-- Temel JavaScript Dosyaları -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/layout.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+
+
+
+
+</body>
+</html>

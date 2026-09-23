@@ -1,0 +1,80 @@
+﻿@model MiniB2B.Models.ProfileViewModel
+
+@{
+    ViewData["Title"] = "Profilim";
+}
+
+<div class="container mt-4">
+    <h2><i class="bi bi-person-circle"></i> Profilim</h2>
+    <hr />
+
+    @if (TempData["Mesaj"] != null)
+    {
+        <div class="alert alert-info">@TempData["Mesaj"]</div>
+    }
+
+    <div class="row g-4">
+        <!-- Kişisel Bilgiler + Kart -->
+        <div class="col-lg-6">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="mb-3">Kişisel Bilgiler</h5>
+                    <p><strong>Ad Soyad:</strong> @Model.User.FirstName @Model.User.LastName</p>
+                    <p><strong>Kullanıcı Adı:</strong> @Model.User.Username</p>
+                    <p><strong>E-posta:</strong> @Model.User.Email</p>
+                    <p><strong>Telefon:</strong> @(Model.User.PhoneNumber ?? "-")</p>
+                </div>
+            </div>
+
+            <div class="card shadow-sm mt-4">
+                <div class="card-body">
+                    <h5 class="mb-3"><i class="bi bi-credit-card"></i> Kayıtlı Kart</h5>
+                    @if (Model.SavedCard != null)
+                    {
+                        <p class="mb-1">**** **** **** @Model.SavedCard.Last4</p>
+                        <p class="text-muted small mb-1">@Model.SavedCard.CardHolder</p>
+                        <p class="text-muted small">Son Kullanma: @Model.SavedCard.ExpiryMonth/@Model.SavedCard.ExpiryYear</p>
+                    }
+                    else
+                    {
+                        <p class="text-muted">Kayıtlı kart bilgisi bulunmuyor.</p>
+                    }
+                    <p class="text-muted small mt-2 mb-0">
+                        <i class="bi bi-shield-lock"></i> Güvenlik nedeniyle CVV ve tam kart numarası hiçbir zaman saklanmaz.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Adres Formu -->
+        <div class="col-lg-6">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="mb-3">Teslimat Adresi</h5>
+                    <form asp-controller="Profile" asp-action="UpdateAddress" method="post">
+                        <div class="mb-3">
+                            <label class="form-label">Adres</label>
+                            <input type="text" name="addressLine" class="form-control"
+                                   value="@Model.User.AddressLine" required />
+                        </div>
+                        <div class="row">
+                            <div class="col-8 mb-3">
+                                <label class="form-label">Şehir</label>
+                                <input type="text" name="city" class="form-control"
+                                       value="@Model.User.City" required />
+                            </div>
+                            <div class="col-4 mb-3">
+                                <label class="form-label">Posta Kodu</label>
+                                <input type="text" name="postalCode" class="form-control"
+                                       value="@Model.User.PostalCode" />
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success">
+                            <i class="bi bi-check-lg"></i> Kaydet
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

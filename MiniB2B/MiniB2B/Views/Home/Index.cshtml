@@ -1,0 +1,115 @@
+﻿@model IEnumerable<MiniB2B.Models.SliderItem>
+
+@{
+    ViewData["Title"] = "Ana Sayfa";
+    var tumUrunler = ViewBag.TumUrunler as List<MiniB2B.Models.Product> ?? new List<MiniB2B.Models.Product>();
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+}
+
+<div class="b2b-home container-fluid px-0 mb-5">
+
+    <!-- Slider -->
+    <div id="b2bMainSlider" class="carousel slide mb-5" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+            @{
+                int slideIndex = 0;
+                foreach (var item in Model)
+                {
+                    <button type="button" data-bs-target="#b2bMainSlider" data-bs-slide-to="@slideIndex"
+                            class="@(slideIndex == 0 ? "active" : "")"
+                            aria-current="@(slideIndex == 0 ? "true" : "false")"
+                            aria-label="Slayt @(slideIndex + 1)"></button>
+                    slideIndex++;
+                }
+            }
+        </div>
+
+        <div class="carousel-inner">
+            @{
+                int itemIndex = 0;
+                foreach (var item in Model)
+                {
+                    bool hasLink = !string.IsNullOrEmpty(item.LinkUrl) && item.LinkUrl != "#";
+
+                    <div class="carousel-item @(itemIndex == 0 ? "active" : "")" data-bs-interval="5500">
+                        <div class="slide-wrap">
+                            <div class="slide-blur" style="background-image:url('@item.ImageUrl')"></div>
+
+                            @if (hasLink)
+                            {
+                                <a href="@item.LinkUrl" title="Tıklayın ve inceleyin">
+                                    <img src="@item.ImageUrl" class="slide-img" alt="@item.Title" loading="@(itemIndex == 0 ? "eager" : "lazy")" />
+                                </a>
+                            }
+                            else
+                            {
+                                <img src="@item.ImageUrl" class="slide-img" alt="@item.Title" loading="@(itemIndex == 0 ? "eager" : "lazy")" />
+                            }
+
+                            <div class="slide-caption d-none d-md-block">
+                                <span class="slide-eyebrow">Duyuru / Kampanya</span>
+                                <h2>@item.Title</h2>
+                                <p>@item.Description</p>
+                                @if (hasLink)
+                                {
+                                    <a href="@item.LinkUrl" class="btn-slide">
+                                        Detayları incele
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    itemIndex++;
+                }
+            }
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#b2bMainSlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Önceki</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#b2bMainSlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Sonraki</span>
+        </button>
+    </div>
+
+    <!-- Öne Çıkan Ürünler -->
+    <div class="container">
+        <div class="section-head">
+            <div>
+                <h3>Öne Çıkan Ürünler</h3>
+                <div class="section-sub">Toplam @tumUrunler.Count() ürün listeleniyor</div>
+            </div>
+            <a href="/Product/Index" class="btn-ghost-navy">Tüm ürünleri gör</a>
+        </div>
+
+        <div class="product-grid">
+            @foreach (var product in tumUrunler)
+            {
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="@product.ImageUrl" alt="@product.ProductName" loading="lazy" />
+                    </div>
+                    <div class="product-body">
+                        <span class="product-code">Kod: @product.ProductCode</span>
+                        <h5 class="product-name">@product.ProductName</h5>
+                        <div class="product-price-row">
+                            <span class="product-price">@product.UnitPrice.ToString("N2") ₺</span>
+                            <a href="/Product/Details/@product.Id" class="btn-view">İncele</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/home.js" asp-append-version="true"></script>
+}

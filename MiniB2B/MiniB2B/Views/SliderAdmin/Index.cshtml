@@ -1,0 +1,87 @@
+﻿@model List<MiniB2B.Models.SliderItem>
+
+@{
+    ViewData["Title"] = "Slider / Kampanya Yönetimi";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/slider-index.css" asp-append-version="true" />
+}
+
+<div class="slider-list-page">
+    <div class="slider-list-wrap">
+
+        <div class="slider-list-head">
+            <div>
+                <h2>Slider / Kampanya Yönetimi</h2>
+                <div class="list-sub">@(Model?.Count ?? 0) kayıt listeleniyor</div>
+            </div>
+            <a asp-action="Create" class="btn-add-slide">
+                <i class="bi bi-plus-lg"></i> Yeni Afiş / Slider Ekle
+            </a>
+        </div>
+
+        <div class="slider-table-card">
+            @if (Model != null && Model.Any())
+            {
+                <table class="slider-table">
+                    <thead>
+                        <tr>
+                            <th style="width:96px;">Görsel</th>
+                            <th>Başlık</th>
+                            <th class="text-center" style="width:80px;">Sıra</th>
+                            <th class="text-center" style="width:100px;">Durum</th>
+                            <th class="text-end" style="width:100px;">İşlem</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <img src="@item.ImageUrl" class="slide-thumb" alt="@item.Title" />
+                                </td>
+                                <td class="slide-title-cell">
+                                    <strong>@(string.IsNullOrEmpty(item.Title) ? "(Başlıksız)" : item.Title)</strong>
+                                </td>
+                                <td class="text-center">
+                                    <span class="order-pill">@item.DisplayOrder</span>
+                                </td>
+                                <td class="text-center">
+                                    @if (item.IsActive)
+                                    {
+                                        <span class="status-badge is-active">Aktif</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="status-badge is-inactive">Pasif</span>
+                                    }
+                                </td>
+                                <td class="text-end">
+                                    <form asp-action="Delete" asp-route-id="@item.Id" method="post" class="d-inline">
+                                        <button type="submit" class="btn-delete-slide" data-title="@item.Title">Sil</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <div class="slider-empty">
+                    <i class="bi bi-images"></i>
+                    <p>Henüz eklenmiş slider veya afiş bulunmamaktadır.</p>
+                    <a asp-action="Create" class="btn-add-slide">
+                        <i class="bi bi-plus-lg"></i> İlk afişi ekle
+                    </a>
+                </div>
+            }
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/slider-index.js" asp-append-version="true"></script>
+}

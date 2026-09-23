@@ -1,0 +1,122 @@
+﻿.basket-page h2 i {
+    color: #198754;
+    margin-right: 6px;
+}
+
+.empty-basket i {
+    opacity: 0.5;
+}
+
+#basketTable tbody tr {
+    transition: background-color 0.15s ease-in-out;
+}
+
+.qty-badge {
+    display: inline-block;
+    min-width: 30px;
+    padding: 4px 10px;
+    background: #eef2ff;
+    color: #3949ab;
+    border-radius: 999px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.qty-stepper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.qty-btn {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+    .qty-btn:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+    }
+
+.js-remove-confirm {
+    transition: transform 0.1s ease-in-out;
+}
+
+    .js-remove-confirm:active {
+        transform: scale(0.95);
+    }
+
+.basket-total-row td {
+    border-top: 2px solid #dee2e6;
+    font-size: 1.05rem;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+#confirmOrderBtn {
+    transition: transform 0.1s ease-in-out, opacity 0.15s ease-in-out;
+}
+
+    #confirmOrderBtn:active {
+        transform: scale(0.97);
+    }
+
+    #confirmOrderBtn.loading {
+        opacity: 0.75;
+        pointer-events: none;
+    }
+
+    #confirmOrderBtn .spinner-border {
+        width: 1rem;
+        height: 1rem;
+        margin-right: 6px;
+    }
+
+/* Onay modalı */
+.confirm-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1055;
+}
+
+    .confirm-overlay.show {
+        display: flex;
+    }
+
+.confirm-box {
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px 28px;
+    max-width: 380px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: confirmPop 0.15s ease-out;
+}
+
+@keyframes confirmPop {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.confirm-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+}

@@ -1,0 +1,251 @@
+﻿@model MiniB2B.ViewModels.ProductGridViewModel
+@using System.Globalization
+
+@{
+    var isAdmin = Model.IsAdmin;
+    ViewData["Title"] = isAdmin ? "Ürün Yönetimi" : "Ürün Kataloğu";
+
+    var urunler = Model.Products;
+    var columns = Model.Columns;
+
+    var toplam = urunler.Count;
+    var tukendi = urunler.Count(p => p.StockQuantity <= 0);
+    var kritik = urunler.Count(p => p.StockQuantity > 0 && p.StockQuantity <= p.CriticalStockQuantity);
+    var stokta = toplam - tukendi - kritik;
+    var oneCikan = urunler.Count(p => Model.FeaturedIds.Contains(p.Id));
+
+    var colCount = columns.Count;
+}
+
+<div class="pi-page">
+
+    <!-- Başlık -->
+    <div class="pi-header">
+        <div>
+            <h1 class="pi-title">@ViewData["Title"]</h1>
+            <p class="pi-subtitle">
+                @if (isAdmin)
+                {
+                    <text>Ürünleri düzenleyin, stok durumunu izleyin ve öne çıkarın.</text>
+                }
+                else
+                {
+                    <text>Güncel ürün, stok ve fiyat bilgilerini inceleyin.</text>
+                }
+            </p>
+        </div>
+        @if (isAdmin)
+        {
+            <a asp-action="Create" class="pi-btn-add">
+                <i class="bi bi-plus-lg"></i> Yeni Ürün Ekle
+            </a>
+        }
+    </div>
+
+    @if (TempData["Mesaj"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show pi-alert" role="alert">
+            <i class="bi bi-check-circle-fill"></i> @TempData["Mesaj"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Kapat"></button>
+        </div>
+    }
+
+    <!-- İstatistik kartları (sadece admin) -->
+    @if (isAdmin)
+    {
+        <div class="pi-stats">
+            <div class="pi-stat">
+                <div class="pi-stat-icon bg-primary-soft"><i class="bi bi-box-seam"></i></div>
+                <div>
+                    <div class="pi-stat-value">@toplam</div>
+                    <div class="pi-stat-label">Toplam Ürün</div>
+                </div>
+            </div>
+            <div class="pi-stat">
+                <div class="pi-stat-icon bg-warning-soft"><i class="bi bi-exclamation-triangle"></i></div>
+                <div>
+                    <div class="pi-stat-value">@kritik</div>
+                    <div class="pi-stat-label">Kritik Stok</div>
+                </div>
+            </div>
+            <div class="pi-stat">
+                <div class="pi-stat-icon bg-danger-soft"><i class="bi bi-x-circle"></i></div>
+                <div>
+                    <div class="pi-stat-value">@tukendi</div>
+                    <div class="pi-stat-label">Tükenen</div>
+                </div>
+            </div>
+            <div class="pi-stat">
+                <div class="pi-stat-icon bg-success-soft"><i class="bi bi-star-fill"></i></div>
+                <div>
+                    <div class="pi-stat-value">@oneCikan</div>
+                    <div class="pi-stat-label">Öne Çıkarılan</div>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="mb-3 d-flex flex-wrap gap-2">
+        <a asp-action="Index" asp-route-aramaKelimesi="@Model.AramaKelimesi"
+           class="btn btn-sm @(Model.KategoriId == null ? "btn-primary" : "btn-outline-primary")">Tümü</a>
+
+        @foreach (var k in Model.Kategoriler)
+        {
+            <a asp-action="Index" asp-route-kategoriId="@k.Id" asp-route-aramaKelimesi="@Model.AramaKelimesi"
+               class="btn btn-sm @(Model.KategoriId == k.Id ? "btn-primary" : "btn-outline-primary")">@k.Name</a>
+        }
+    </div>
+
+    <!-- Arama + filtre -->
+    <div class="pi-toolbar">
+        <form method="get" asp-action="Index" class="pi-search">
+            <i class="bi bi-search"></i>
+            @if (Model.KategoriId != null)
+            {
+                <input type="hidden" name="kategoriId" value="@Model.KategoriId" />
+            }
+            <input type="text" id="piSearch" name="aramaKelimesi" value="@Model.AramaKelimesi"
+                   placeholder="Ürün adı, kodu, marka veya üretici kodu ile ara...  ( / )" autocomplete="off" />
+            @if (!string.IsNullOrWhiteSpace(Model.AramaKelimesi))
+            {
+                <a asp-action="Index" class="pi-search-clear" title="Aramayı temizle"><i class="bi bi-x-lg"></i></a>
+            }
+            <button type="submit" class="pi-search-btn">Ara</button>
+        </form>
+
+        <div class="pi-chips" id="piChips">
+            <button type="button" class="pi-chip active" data-filter="all">Tümü <span>@toplam</span></button>
+            <button type="button" class="pi-chip" data-filter="ok">Stokta <span>@stokta</span></button>
+            <button type="button" class="pi-chip" data-filter="critical">Kritik <span>@kritik</span></button>
+            <button type="button" class="pi-chip" data-filter="out">Tükendi <span>@tukendi</span></button>
+        </div>
+    </div>
+
+    @if (!urunler.Any())
+    {
+        <div class="pi-empty">
+            <i class="bi bi-inbox"></i>
+            <h5>Ürün bulunamadı</h5>
+            @if (!string.IsNullOrWhiteSpace(Model.AramaKelimesi))
+            {
+                <p>"@Model.AramaKelimesi" araması için sonuç yok.</p>
+                <a asp-action="Index" class="btn btn-outline-primary btn-sm">Aramayı temizle</a>
+            }
+            else
+            {
+                <p>Henüz eklenmiş ürün bulunmuyor.</p>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="pi-card">
+            <div class="pi-card-head">
+                <span id="piCount">@toplam ürün gösteriliyor</span>
+                <span class="pi-hint d-none d-md-inline"><i class="bi bi-arrow-down-up"></i> Sıralamak için sütun başlığına tıklayın</span>
+            </div>
+
+            <div class="table-responsive">
+                <table class="pi-table" id="piTable">
+                    <thead>
+                        <tr>
+                            @foreach (var col in columns)
+                            {
+                                var isNumeric = col.RenderType == "Currency" || col.PropertyName == "StockQuantity";
+                                var isSortable = col.RenderType != "Action" && col.RenderType != "Input" && col.RenderType != "Image";
+                                var thClass = $"{MiniB2B.Helpers.GridColumnRenderHelper.CellClass(col)} {(isSortable ? "pi-sortable" : "")}".Trim();
+                                var thStyle = MiniB2B.Helpers.GridColumnRenderHelper.WidthStyle(col);
+
+                                if (isSortable)
+                                {
+                                    <th class="@thClass" style="@thStyle" data-type="@(isNumeric ? "number" : "text")">
+                                        @col.ColumnTitle
+                                    </th>
+                                }
+                                else
+                                {
+                                    <th class="@thClass" style="@thStyle">@col.ColumnTitle</th>
+                                }
+                            }
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var p in urunler)
+                        {
+                            var durum = p.StockQuantity <= 0 ? "out"
+                            : (p.StockQuantity <= p.CriticalStockQuantity ? "critical" : "ok");
+                            var isFeatured = Model.FeaturedIds.Contains(p.Id);
+
+                            <tr class="pi-row" data-stock="@durum">
+                                @foreach (var col in columns)
+                                {
+                                    @await Html.PartialAsync("_GridCell", new MiniB2B.ViewModels.GridCellViewModel
+                                    {
+                                        Column = col,
+                                                Product = p,
+                                                IsFeatured = isFeatured,
+                                                IsAdmin = isAdmin
+                                                })
+                                                }
+                            </tr>
+                        }
+
+                        <tr id="piNoResult" hidden>
+                            <td colspan="@colCount" class="pi-noresult">
+                                <i class="bi bi-funnel"></i> Bu filtreye uyan ürün yok.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+</div>
+
+<!-- Görsel önizleme -->
+<div class="modal fade" id="imgModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content pi-modal">
+            <div class="modal-header border-0 pb-0">
+                <h6 class="modal-title" id="imgModalTitle"></h6>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+            </div>
+            <div class="modal-body pi-modal-img">
+                <img id="imgModalImg" src="" alt="" />
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (isAdmin)
+{
+    <!-- Öne çıkarmadan kaldırma onayı -->
+    <div class="modal fade" id="removeFeaturedModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content pi-modal">
+                <form asp-controller="SliderAdmin" asp-action="RemoveFeatured" method="post">
+                    <input type="hidden" name="productId" id="removeProductId" value="" />
+                    <div class="modal-body text-center p-4">
+                        <div class="pi-modal-icon"><i class="bi bi-star"></i></div>
+                        <h5 class="mb-2">Öne çıkarmadan kaldır</h5>
+                        <p class="text-muted mb-0">
+                            <strong id="removeProductName"></strong> ürününü öne çıkarmadan kaldırmak istiyor musunuz?
+                        </p>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-center pt-0 pb-4 gap-2">
+                        <button type="button" class="btn btn-light px-4" data-bs-dismiss="modal">Vazgeç</button>
+                        <button type="submit" class="btn btn-danger px-4">Evet, Kaldır</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/product-index.css" asp-append-version="true" />
+}
+
+@section Scripts {
+    <script src="~/js/product-index.js" asp-append-version="true"></script>
+}

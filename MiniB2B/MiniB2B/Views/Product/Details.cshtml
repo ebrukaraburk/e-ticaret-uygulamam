@@ -1,0 +1,270 @@
+﻿@model MiniB2B.Models.Product
+@using System.Globalization
+
+@{
+    ViewData["Title"] = Model.ProductName + " - Ürün Detayı";
+
+    var isAdmin = User.Identity != null && User.Identity.IsAuthenticated && User.IsInRole("Admin");
+    var benzerUrunler = ViewBag.BenzerUrunler as List<MiniB2B.Models.Product> ?? new List<MiniB2B.Models.Product>();
+
+    var stokYok = Model.StockQuantity <= 0;
+    var stokKritik = !stokYok && Model.StockQuantity <= Model.CriticalStockQuantity;
+    var fiyatInv = Model.UnitPrice.ToString(CultureInfo.InvariantCulture);
+}
+
+<div class="container mt-4 mb-5">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="mb-3">
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="/Home">Anasayfa</a></li>
+            <li class="breadcrumb-item"><a asp-action="Index">Ürünler</a></li>
+            <li class="breadcrumb-item active" aria-current="page">@Model.ProductName</li>
+        </ol>
+    </nav>
+
+    <!-- Ortada tik bildirimi -->
+    @if (TempData["Mesaj"] != null)
+    {
+        <div class="center-toast-overlay" id="mesajToast">
+            <div class="center-toast-box">
+                <div class="check-circle">
+                    <i class="bi bi-check-lg"></i>
+                </div>
+                <div class="center-toast-text">@TempData["Mesaj"]</div>
+            </div>
+        </div>
+    }
+
+    <!-- ÜST BÖLÜM: Görsel + Bilgiler -->
+    <div class="card shadow-sm border-0 p-4 mb-4">
+        <div class="row g-4">
+
+            <!-- Görsel -->
+            <div class="col-lg-5">
+                <div class="pd-image-box">
+                    @if (!string.IsNullOrEmpty(Model.ImageUrl))
+                    {
+                        <img src="@Model.ImageUrl" alt="@Model.ProductName" />
+                    }
+                    else
+                    {
+                        <div class="text-center text-muted">
+                            <i class="bi bi-image" style="font-size: 4rem;"></i>
+                            <div>Görsel yok</div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <!-- Bilgiler -->
+            <div class="col-lg-7 d-flex flex-column">
+
+                <div class="mb-2">
+                    <span class="badge bg-dark me-1">@Model.Brand</span>
+                    <span class="text-muted small">Ürün Kodu: <strong>@Model.ProductCode</strong></span>
+                </div>
+
+                <h1 class="fw-bold text-dark h2 mb-3">@Model.ProductName</h1>
+
+                <!-- Fiyat + Stok -->
+                <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+                    <div class="pd-price">@Model.UnitPrice.ToString("N2") ₺</div>
+                    <div>
+                        @if (stokYok)
+                        {
+                            <span class="badge bg-danger fs-6"><i class="bi bi-x-circle"></i> Stokta yok</span>
+                        }
+                        else if (stokKritik)
+                        {
+                            <span class="badge bg-warning text-dark fs-6"><i class="bi bi-exclamation-triangle"></i> Son @Model.StockQuantity adet</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-success fs-6"><i class="bi bi-check-circle"></i> Stokta var (@Model.StockQuantity adet)</span>
+                        }
+                    </div>
+                </div>
+
+                <!-- Kısa açıklama -->
+                <p class="text-secondary" style="white-space: pre-line;">
+                    @(!string.IsNullOrWhiteSpace(Model.Description)
+                                        ? Model.Description
+                                        : "Bu ürün B2B bayilik sistemi kapsamında sunulmaktadır. Detaylı bilgi ve toptan alım koşulları için müşteri temsilcinizle görüşebilirsiniz.")
+                </p>
+
+                <!-- Hızlı bilgiler -->
+                <div class="pd-info-card mb-4">
+                    <div class="row g-2 small">
+                        <div class="col-sm-6">
+                            <i class="bi bi-upc-scan text-primary"></i>
+                            <span class="text-muted">Üretici Kodu:</span>
+                            <strong>@Model.ManufacturerCode</strong>
+                        </div>
+                        <div class="col-sm-6">
+                            <i class="bi bi-tag text-primary"></i>
+                            <span class="text-muted">Marka:</span>
+                            <strong>@Model.Brand</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sipariş alanı -->
+                <div class="mt-auto pt-3 border-top">
+                    @if (isAdmin)
+                    {
+                        <div class="d-flex flex-wrap gap-2 align-items-center">
+                            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">
+                                <i class="bi bi-pencil-square"></i> Ürünü Düzenle
+                            </a>
+                            <a asp-action="Index" class="btn btn-outline-secondary">
+                                <i class="bi bi-arrow-left"></i> Ürün Listesine Dön
+                            </a>
+                            <span class="text-muted small ms-2">Yönetici olarak giriş yaptınız, sipariş verilemez.</span>
+                        </div>
+                    }
+                    else if (stokYok)
+                    {
+                        <div class="alert alert-danger mb-0">
+                            <i class="bi bi-x-circle"></i> Bu ürün şu an stokta bulunmuyor.
+                        </div>
+                    }
+                    else
+                    {
+                        <form asp-controller="Order" asp-action="AddToCart" method="post">
+                            <input type="hidden" name="productId" value="@Model.Id" />
+
+                            <div class="d-flex flex-wrap align-items-end gap-3">
+                                <div>
+                                    <label class="form-label small text-muted mb-1">Adet</label>
+                                    <div class="input-group pd-qty">
+                                        <button type="button" class="btn btn-outline-secondary" id="qtyMinus">−</button>
+                                        <input type="number" name="adet" id="qtyInput" value="1" min="1"
+                                               max="@Model.StockQuantity" data-unit-price="@fiyatInv" class="form-control" />
+                                        <button type="button" class="btn btn-outline-secondary" id="qtyPlus">+</button>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="small text-muted mb-1">Toplam</div>
+                                    <div class="fs-4 fw-bold text-dark" id="totalPrice">@Model.UnitPrice.ToString("N2") ₺</div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-lg px-4 ms-auto">
+                                    <i class="bi bi-cart-plus"></i> Sepete Ekle
+                                </button>
+                            </div>
+                        </form>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ALT BÖLÜM: Sekmeler -->
+    <div class="card shadow-sm border-0 mb-4">
+        <div class="card-header bg-white">
+            <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                <li class="nav-item">
+                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tabSpecs" type="button">
+                        <i class="bi bi-list-ul"></i> Ürün Özellikleri
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tabDesc" type="button">
+                        <i class="bi bi-file-text"></i> Açıklama
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body tab-content">
+
+            <div class="tab-pane fade show active" id="tabSpecs">
+                <table class="table table-bordered pd-specs mb-0">
+                    <tbody>
+                        <tr><th>Ürün Kodu</th><td>@Model.ProductCode</td></tr>
+                        <tr><th>Ürün Adı</th><td>@Model.ProductName</td></tr>
+                        <tr><th>Marka</th><td>@Model.Brand</td></tr>
+                        <tr><th>Üretici Kodu</th><td>@Model.ManufacturerCode</td></tr>
+                        <tr>
+                            <th>Stok Durumu</th>
+                            <td>
+                                @if (stokYok)
+                                {
+                                    <span class="badge bg-danger">Stokta yok</span>
+                                }
+                                else if (stokKritik)
+                                {
+                                    <span class="badge bg-warning text-dark">Kritik (@Model.StockQuantity adet)</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-success">Var (@Model.StockQuantity adet)</span>
+                                }
+                            </td>
+                        </tr>
+                        <tr><th>Birim Fiyat</th><td>@Model.UnitPrice.ToString("N2") ₺</td></tr>
+
+                        @if (isAdmin)
+                        {
+                            <tr><th>Özel Kod 1</th><td>@(string.IsNullOrEmpty(Model.SpecialCode1) ? "-" : Model.SpecialCode1)</td></tr>
+                            <tr><th>Özel Kod 2</th><td>@(string.IsNullOrEmpty(Model.SpecialCode2) ? "-" : Model.SpecialCode2)</td></tr>
+                            <tr><th>Kritik Stok Seviyesi</th><td>@Model.CriticalStockQuantity</td></tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tab-pane fade" id="tabDesc">
+                @if (!string.IsNullOrWhiteSpace(Model.Description))
+                {
+                    <p class="mb-0" style="white-space: pre-line;">@Model.Description</p>
+                }
+                else
+                {
+                    <p class="text-muted mb-0">Bu ürün için henüz açıklama girilmemiş.</p>
+                }
+            </div>
+        </div>
+    </div>
+
+    <!-- Benzer ürünler -->
+    @if (benzerUrunler.Any())
+    {
+        <h4 class="fw-bold mb-3"><i class="bi bi-grid text-primary"></i> Aynı Markadan Diğer Ürünler</h4>
+        <div class="row row-cols-2 row-cols-md-4 g-3">
+            @foreach (var b in benzerUrunler)
+            {
+                <div class="col">
+                    <a asp-action="Details" asp-route-id="@b.Id" class="text-decoration-none">
+                        <div class="card h-100 border-0 shadow-sm similar-card">
+                            <div class="similar-img">
+                                @if (!string.IsNullOrEmpty(b.ImageUrl))
+                                {
+                                    <img src="@b.ImageUrl" alt="@b.ProductName" />
+                                }
+                                else
+                                {
+                                    <i class="bi bi-image text-muted" style="font-size: 2rem;"></i>
+                                }
+                            </div>
+                            <div class="card-body">
+                                <div class="small text-muted">@b.ProductCode</div>
+                                <div class="fw-bold text-dark">@b.ProductName</div>
+                                <div class="text-primary fw-bold mt-1">@b.UnitPrice.ToString("N2") ₺</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/product-details.css" asp-append-version="true" />
+}
+
+@section Scripts {
+    <script src="~/js/product-details.js" asp-append-version="true"></script>
+}

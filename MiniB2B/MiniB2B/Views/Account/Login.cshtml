@@ -1,0 +1,103 @@
+﻿@{
+    ViewData["Title"] = "Giriş Yap";
+}
+
+<div class="auth-page">
+    <div class="auth-shell">
+
+        <!-- Sol: marka alanı (mobilde gizlenir) -->
+        <aside class="auth-brand">
+            <div class="auth-brand-logo">
+                <i class="bi bi-box-seam-fill"></i>
+                <span>MiniB2B</span>
+            </div>
+
+            <div class="auth-brand-body">
+                <h2>Bayi Sipariş Portalına Hoş Geldiniz</h2>
+                <p>Ürünleri inceleyin, sepetinizi oluşturun ve siparişlerinizi tek yerden takip edin.</p>
+
+                <ul class="auth-features">
+                    <li><i class="bi bi-lightning-charge-fill"></i> Hızlı ve kolay sipariş</li>
+                    <li><i class="bi bi-boxes"></i> Güncel stok ve fiyat bilgisi</li>
+                    <li><i class="bi bi-clock-history"></i> Sipariş geçmişi takibi</li>
+                </ul>
+            </div>
+
+            <small class="auth-brand-foot">&copy; 2026 MiniB2B</small>
+        </aside>
+
+        <!-- Sağ: form -->
+        <section class="auth-form-wrap">
+            <div class="auth-mobile-logo">
+                <i class="bi bi-box-seam-fill"></i> MiniB2B
+            </div>
+
+            <h1 class="auth-title">Giriş Yap</h1>
+            <p class="auth-subtitle">Devam etmek için hesabınızla giriş yapın.</p>
+
+            @if (ViewBag.Error != null)
+            {
+                <div class="auth-alert auth-alert-danger" role="alert">
+                    <i class="bi bi-exclamation-circle-fill"></i>
+                    <span>@ViewBag.Error</span>
+                </div>
+            }
+            @if (TempData["Mesaj"] != null)
+            {
+                <div class="auth-alert auth-alert-success" role="alert">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span>@TempData["Mesaj"]</span>
+                </div>
+            }
+
+            <form id="loginForm" asp-controller="Account" asp-action="Login" method="post" novalidate>
+                <input type="hidden" name="returnUrl" value="@ViewData["ReturnUrl"]" />
+
+                <div class="auth-field">
+                    <label for="usernameOrEmail">Kullanıcı Adı veya E-Posta</label>
+                    <div class="auth-input">
+                        <i class="bi bi-person"></i>
+                        <input type="text" id="usernameOrEmail" name="usernameOrEmail"
+                               placeholder="ornek@firma.com" autocomplete="username" required />
+                    </div>
+                    <div class="auth-error">Bu alan zorunludur.</div>
+                </div>
+
+                <div class="auth-field">
+                    <label for="password">Şifre</label>
+                    <div class="auth-input">
+                        <i class="bi bi-lock"></i>
+                        <input type="password" id="password" name="password"
+                               placeholder="••••••••" autocomplete="current-password" required />
+                        <button type="button" class="auth-toggle" id="togglePassword"
+                                aria-label="Şifreyi göster/gizle" tabindex="-1">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                    </div>
+                    <div class="auth-error">Şifrenizi girin.</div>
+                    <div class="auth-caps" id="capsWarning">
+                        <i class="bi bi-exclamation-triangle-fill"></i> Caps Lock açık
+                    </div>
+                </div>
+
+                <button type="submit" class="auth-submit" id="loginBtn">
+                    <span class="auth-submit-text">Giriş Yap</span>
+                    <span class="auth-spinner" aria-hidden="true"></span>
+                </button>
+            </form>
+
+            <p class="auth-switch">
+                Hesabınız yok mu?
+                <a asp-controller="Account" asp-action="Register">Kayıt Ol</a>
+            </p>
+        </section>
+    </div>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+}
+
+@section Scripts {
+    <script src="~/js/login.js" asp-append-version="true"></script>
+}

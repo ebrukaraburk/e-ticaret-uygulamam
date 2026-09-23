@@ -1,0 +1,98 @@
+﻿.order-detail-page h2 i {
+    color: #0d6efd;
+    margin-right: 6px;
+}
+
+.order-total-row td {
+    border-top: 2px solid #dee2e6;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+/* Durum takip çubuğu */
+.status-timeline {
+    display: flex;
+    width: 100%;
+    padding: 10px 4px 6px;
+}
+
+.timeline-step {
+    position: relative;
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+}
+
+    /* Her adımdan bir sonrakine giden çizgi, dairenin arkasında */
+    .timeline-step:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        width: 100%;
+        height: 3px;
+        background: #dee2e6;
+        z-index: 0;
+    }
+
+    .timeline-step.line-done:not(:last-child)::after {
+        background: #198754;
+    }
+
+    .timeline-step.rejected::after {
+        background: #dc3545;
+    }
+
+.step-dot {
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #dee2e6;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px #dee2e6;
+    flex-shrink: 0;
+}
+
+.timeline-step.done .step-dot {
+    background: #198754;
+    box-shadow: 0 0 0 2px #198754;
+}
+
+.timeline-step.rejected .step-dot {
+    background: #dc3545;
+    box-shadow: 0 0 0 2px #dc3545;
+}
+
+.step-label {
+    position: relative;
+    z-index: 1;
+    font-size: 0.72rem;
+    color: #6c757d;
+    line-height: 1.2;
+    white-space: nowrap;
+    background: #fff; /* label'ın altındaki çizgiyi örtmesin diye */
+    padding: 0 2px;
+}
+
+.timeline-step.done .step-label {
+    color: #198754;
+    font-weight: 600;
+}
+
+.timeline-step.rejected .step-label {
+    color: #dc3545;
+    font-weight: 600;
+}
+
+@media (max-width: 576px) {
+    .step-label {
+        font-size: 0.6rem;
+    }
+}
